@@ -8,5 +8,5 @@ module.exports = [
     './gulp/tasks/fonts',
     './gulp/tasks/styles',
     './gulp/tasks/scripts',
-
+   
 ];

@@ -2,13 +2,10 @@ module.exports = function () {
     $.gulp.task('styles:build', () => {
         return $.gulp.src('./dev/static/stylus/main.styl')
             .pipe($.gp.stylus({
-                'include css': true,
-            }))
-            .pipe($.gp.autoprefixer({
-                browsers: ['last 3 version']
+                use:[nib()],
+                'include css': true
             }))
             .pipe($.gp.csscomb())
-            .pipe($.gp.groupCssMediaQueries())
             .pipe($.gp.csso())
             .pipe($.gulp.dest('./build/static/css/'))
     });
@@ -16,6 +13,7 @@ module.exports = function () {
     $.gulp.task('styles:dev', () => {
         return $.gulp.src('./dev/static/stylus/main.styl')
             .pipe($.gp.sourcemaps.init())
+            .pipe($.gp.sourcemaps.identityMap())
             .pipe($.gp.stylus({
                 'include css': true
             }))
@@ -25,15 +23,21 @@ module.exports = function () {
                     message: error.message
                 };
             }))
-            .pipe($.gp.groupCssMediaQueries())
+            .pipe($.gp.pxtorem({
+                replace: false,
+                propList: ['*'],
+                minPixelValue: 1
+            }))
+            
             .pipe($.gp.sourcemaps.write())
             .pipe($.gp.autoprefixer({
                 browsers: ['last 3 version']
             }))
-            
             .pipe($.gulp.dest('./build/static/css/'))
             .pipe($.browserSync.reload({
                 stream: true
             }));
+    
+            
     });
 };
