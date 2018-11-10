@@ -11,10 +11,6 @@
   "devDependencies": {
     "browser-sync": "^2.18.12",
     "del": "^3.0.0",
-<<<<<<< HEAD
-=======
-    "font-awesome": "^4.7.0",
->>>>>>> 21eb8187c42a471c41f03f5ff27f99250987e128
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-cheerio": "^0.6.2",
