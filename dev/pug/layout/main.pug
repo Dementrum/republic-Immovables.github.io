@@ -13,8 +13,9 @@ html(lang="ru-RU")
 		meta(property='og:image', content='path/to/image.jpg')
 		link(rel='icon', href='img/favicon/favicon.ico')
 		link(rel='apple-touch-icon', sizes='180x180',href='img/favicon/apple-touch-icon-180x180.png')
-		<link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+		link(href="https://fonts.googleapis.com/css?family=PT+Serif", rel="stylesheet")
+		link(href="https://fonts.googleapis.com/css?family=Open+Sans", rel="stylesheet")
+		
 
 		//- favicon block start
 		//- favicon block end
@@ -30,7 +31,8 @@ html(lang="ru-RU")
 			include ../modules/header
 			block content
 			include ../modules/footer
-		script(src="static/js/jquery.js")
-		script(src="static/js/libs.min.js")
-		script(src="static/js/main.js")
 		block script
+			script(src="static/js/jquery.js")
+			script(src="static/js/libs.min.js")
+			script(src="static/js/main.js")
+			script(src="https://use.fontawesome.com/72c23d4204.js")
