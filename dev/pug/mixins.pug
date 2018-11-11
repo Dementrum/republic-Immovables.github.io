@@ -10,10 +10,11 @@ mixin nav(className, items, activeItem)
 				li(class= `${className}__item` + ( ( ndx === activeItem ) ? ` ${className}__item--active` : ' ') )
 					a(class=`${className}__link` href="#")= item
 
-mixin nav-soc(className, items)
-	nav.nav-footer
+mixin nav-soc(className, items, activeItem)
+	nav.nav-list
 		ul(class= `${className}`)
-			each item in items
-				li(class= `${className}__item`)
-					a(class= `${className}__link` href=item.href) 
-						i(class= item.name) 
+			each item, ndx in items
+				li(class= `${className}__item` + ( ( ndx === activeItem ) ? ` ${className}__item--active` : ' ') )
+					a( class= `${className}__link` href=item.href)= item.name
+					
+					

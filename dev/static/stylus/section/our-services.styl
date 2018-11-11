@@ -1,0 +1,108 @@
+.our-services 
+  display flex
+  flex 0 1 100%
+  flex-direction: row
+  background-size contain
+  background-image linear-gradient(to top, #a31c1d 0%, #cc0000 100%)
+  relative()
+  &__left
+    min-height 640px 
+    display flex
+    flex 0 1 36%
+    background-size contain
+    background url(../img/content/city-2.jpg) no-repeat left 
+  &__right
+    col(flex-start, center)
+    flex: 0 1 50%
+  &__title
+    font-size 36px
+    color #ffffff
+    font-family PtFont
+    font-weight normal
+    margin-top 80px
+
+.nav-list
+  &-services
+    margin-top 50px
+    display flex
+    justify-content space-between
+    min-width 500px
+    padding-left 30px
+    &__item
+      text-align center
+      &--active
+          a
+            color #ffffcc
+    &__link
+      font-size: 23px 
+
+.nav-list-services__item::after
+    content ''
+    display block
+    background-color #fff
+    width 100px
+    height 2px
+
+.services-list
+  background #fff
+  padding 82px 55px 77px 70px
+  absolute()
+  transform: translate(-10%, 70%)
+  min-width: 47%
+  &__item
+    font-size 20px
+    font-weight normal
+    padding 15px 0 0 10px
+    &.note
+      &:before
+        content ''
+        font-family fontawesome
+        display inline-block
+        font-size 20px
+        color #ca0611
+        margin-right 10px
+    &.cheet
+      &:before
+        content ''
+        font-family fontawesome
+        display inline-block
+        font-size 20px
+        color #ca0611
+        margin-right 10px
+    &.search
+      &:before
+        content ''
+        font-family fontawesome
+        display inline-block
+        font-size 20px
+        color #ca0611
+        margin-right 10px
+    &.key
+      &:before
+        content ''
+        font-family fontawesome
+        display inline-block
+        font-size 20px
+        color #ca0611
+        margin-right 10px
+  &__prev
+    absolute(, 85px, -15px) 
+    cursor pointer
+    border: 1px solid #16263b
+    background-color #fff
+    padding 17px 20px
+    .icon-arrow
+      size(15px)
+      
+  &__next
+    absolute(, 0, -15px)
+    cursor pointer
+    border: 1px solid #16263b
+    background-color #fff
+    padding 17px 20px
+    .icon-right-arrow
+      size(15px)
+     
+
+    
+

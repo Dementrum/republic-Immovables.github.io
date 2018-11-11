@@ -28,7 +28,7 @@ module.exports = function () {
                 propList: ['*'],
                 minPixelValue: 1
             }))
-            // .pipe($.gp.fontAwesome())
+            // .pipe($.gp.FontAwesome())
             .pipe($.gp.sourcemaps.write())
             .pipe($.gp.autoprefixer({
                 browsers: ['last 3 version']
