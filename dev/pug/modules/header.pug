@@ -1,5 +1,5 @@
-.container.welcome__container
-	header.welcome_header
+.welcome__container
+	header.container.welcome_header
 		.header-logo
 				a.logo(href="/" title="Республика недвижимости", style= 'background-image: url(static/img/general/ramka_swirl.png);') 
 				a(href="").mobile-icon
@@ -9,7 +9,7 @@
 				ul.nav-soc
 					li.nav-soc__item
 						a.nav-soc__link(href="https://vk.com/club29519563" target="_blank")
-							i.fa.fa-vk
+							+icon('vk')
 					li.nav-soc__item
 						a.nav-soc__link(href="https://www.avito.ru/respublika" target="_blank")
 							+icon('avito')
