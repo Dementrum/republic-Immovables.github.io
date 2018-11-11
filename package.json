@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.18.12",
+    "browser-sync": "^2.26.3",
     "del": "^3.0.0",
     "font-awesome": "^4.7.0",
     "gulp": "^4.0.0",
@@ -35,7 +35,7 @@
     "gulp-svgmin": "^1.2.4",
     "gulp-tinypng": "^1.0.2",
     "gulp-uglifyjs": "^0.6.2",
-    "mozjpeg": "^6.0.0",
+    "mozjpeg": "^6.0.1",
     "nib": "^1.1.2",
     "postcss-custom-properties": "^7.0.0",
     "postcss-fontpath": "^1.0.0",
