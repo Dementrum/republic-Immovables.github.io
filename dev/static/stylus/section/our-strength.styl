@@ -1,6 +1,31 @@
 .our-strength
-    &__container
-        col(flex-start, center)
-    &__nav
-        display flex
-        justify-content space-around
+  &__container
+    col(flex-start, center)
+  &__title
+    margin-top 80px
+    font-family PtFont
+    font-size 36px
+    font-weight normal
+  &__nav
+    display flex
+    justify-content space-between
+  &__item
+    flex: 0 1 22%
+    &:first-child
+      padding 0 10px
+    p
+      font-size 20px
+      line-height 1.4
+      text-align center
+    &.skyline::before
+      content ''
+      display block
+      size(56px, 60px)
+      background-image url('../img/content/skyline.svg')
+      background-size 100%
+      color: #000033
+
+
+
+
+        
