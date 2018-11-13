@@ -11,19 +11,55 @@
     justify-content space-between
   &__item
     flex: 0 1 22%
+    margin 66px 0 95px 0
     &:first-child
       padding 0 10px
     p
       font-size 20px
       line-height 1.4
       text-align center
+      flex-direction: column
+      display flex
+      &::before
+        content ''
+        display inline-block
+        size(70px, 2px)
+        background-color #cc0000
+        margin: 14px auto 21px
     &.skyline::before
       content ''
       display block
       size(56px, 60px)
       background-image url('../img/content/skyline.svg')
       background-size 100%
-      color: #000033
+      background-repeat no-repeat
+      margin 0 auto
+    &.placeholder
+      &::before
+        content ''
+        display block
+        size(56px, 60px)
+        background-image url('../img/content/placeholder.svg')
+        background-size 100%
+        margin 0 auto
+        background-repeat no-repeat
+    &.house-key::before
+      content ''
+      display block
+      size(56px, 60px)
+      background-image url('../img/content/house-key.svg')
+      background-size 100%
+      margin 0 auto
+      background-repeat no-repeat
+    
+    &.contract::before
+      content ''
+      display block
+      size(56px, 60px)
+      background-image url('../img/content/contract.svg')
+      background-size 100%
+      margin 0 auto
+      background-repeat no-repeat
 
 
 
