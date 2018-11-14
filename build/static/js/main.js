@@ -10,9 +10,6 @@ function initMap() {
 		center: centerLatLng,
 		zoom: 16.7,
 		disableDefaultUI: true,
-<<<<<<< HEAD
-		
-=======
 		styles: [
 			{
 				"featureType": "poi.park",
@@ -64,7 +61,6 @@ function initMap() {
 			}
 		]
 	
->>>>>>> 5fe0168ff579756aaa0aaef5358a0bfb6260ae90
 	};
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 	
