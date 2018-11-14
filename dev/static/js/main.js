@@ -10,6 +10,7 @@ function initMap() {
 		center: centerLatLng,
 		zoom: 16.7,
 		disableDefaultUI: true,
+		
 	};
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 	
