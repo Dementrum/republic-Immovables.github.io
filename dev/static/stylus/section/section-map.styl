@@ -1,8 +1,56 @@
 .map
   min-height 720px
   display flex
-  justify-content: flex-end
   &__container
-    flex 0 1 60%
+    flex 0 1 73%
+    margin-top auto
   &__object
-    height calc(100% - 270px)
+    height calc(100% - 70px)
+    min-height 650px
+.form-container
+  flex: 0 1 40%
+  background #fff
+.form-group
+  margin-bottom 15px
+
+.form-label 
+	font-size 18px
+	margin 0
+	display block
+	opacity 1
+	-webkit-transition: .333s ease top, .333s ease opacity
+	transition .333s ease top, .333s ease opacity
+
+.form-control 
+  border-color text
+  border-width 0 0 1px 0
+  border-radius 0
+  border-style none none solid none
+  box-shadow none
+	
+.form-control:focus 
+	box-shadow none
+	border-color #9a0000
+
+.form-title
+  padding-top 66px
+  h3
+    font-size 36px
+    font-family PtFont
+    font-weight normal
+    padding-left 50px
+  &-desc
+    margin 15px 0 0 50px
+    display block
+
+.form-group
+  padding 37px 0 0 50px
+::-webkit-input-placeholder 
+  opacity 0
+::-moz-placeholder
+  opacity  0
+:-moz-placeholder
+  opacity 0
+:-ms-input-placeholder
+  opacity 0
+

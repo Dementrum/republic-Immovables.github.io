@@ -1,5 +1,4 @@
-{
-  "map": [
+styles: [
 	  {
       "featureType": "poi.park",
       "elementType": "geometry.fill",
@@ -49,7 +48,7 @@
       ]
     }
   ]
-}
+
 
 
 
