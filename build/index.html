@@ -121,6 +121,30 @@
         </div>
       </section>
       <section class="section map"> 
+        <div class="form-container">
+          <form class="form" id="contact-form" action="#" method="POST" role="form">
+            <div class="form-title"> 
+              <h3>Бесплатная консультация</h3><span class="form-title-desc">Заполните заявку и мы свяжемся с Вами</span>
+            </div>
+            <div class="form-group form-group--name"> 
+              <label class="form-label" type="text" for="name">Ваше имя:</label>
+              <input class="form-control" id="name" type="text" name="name" placeholder="Ваше имя" tabindex="1" required>
+            </div>
+            <div class="form-group form-group--phone">
+              <label class="form-label" type="text" for="phone">Телефон:</label>
+              <input class="form-control" id="phone" type="text" name="phone" placeholder="Телефон:" tabindex="2" required>
+            </div>
+            <div class="form-group form-group--text">
+              <label class="form-label" type="text" for="tema">Тема заявки:</label>
+              <input class="form-control g-btn g-btn--secrets" id="text" type="text" name="tema" placeholder="Тема заявки:" tabindex="3" required>
+            </div>
+            <div class="form-group form-group--checkbox">
+              <label class="form-label form-label--checkbox" type="checkbox" for="form-check">
+                <input class="check form-control" id="check" type="checkbox" name="form-check"><span class="checkbox-custom"></span><span class="label">Даю свое согласие на обработку персональных данных</span>
+              </label>
+            </div>
+          </form>
+        </div>
         <div class="map__container">
           <div class="map__object" id="map"></div>
         </div>
