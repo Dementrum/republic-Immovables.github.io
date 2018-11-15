@@ -5,10 +5,10 @@ $(document).ready(function () {
 
 function initMap() {
 	
-	var centerLatLng = new google.maps.LatLng(61.782793, 34.383885);
+	var centerLatLng = new google.maps.LatLng(61.782450, 34.383180);
 	var mapOptions = {
 		center: centerLatLng,
-		zoom: 16.7,
+		zoom: 17.5,
 		disableDefaultUI: true,
 		styles: [
 			{
@@ -62,16 +62,16 @@ function initMap() {
 		]
 	
 	};
+
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 	
-	var marker = new google.maps.Marker({
-		position: centerLatLng,
+	var myMarker = new google.maps.Marker({ 
+		position: new google.maps.LatLng(61.782793, 34.383885), 
 		map: map,
 		draggable: false,
 		animation: google.maps.Animation.DROP, 
-    icon: "static/img/content/maps-and-flags.svg"
-    
-	});
+    icon: "static/img/content/maps-and-flags.svg" 
+	}); 
 
 }
 
