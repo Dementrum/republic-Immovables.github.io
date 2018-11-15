@@ -8,7 +8,7 @@ function initMap() {
 	var centerLatLng = new google.maps.LatLng(61.782450, 34.383180);
 	var mapOptions = {
 		center: centerLatLng,
-		zoom: 17.5,
+		zoom: 17.3,
 		disableDefaultUI: true,
 		styles: [
 			{
