@@ -2,14 +2,25 @@
   min-height 720px
   display flex
   &__container
-    flex 0 1 73%
+    flex 0 1 60%
     margin-top auto
   &__object
     height calc(100% - 70px)
     min-height 650px
+
 .form-container
-  flex: 0 1 40%
+  flex: 0 0 40%
+  position relative
+
+.form
+  min-width: 550px
   background #fff
+  box-shadow: 0 4px 43px rgba(0, 0, 0, 0.14)
+  position absolute
+  top 5%
+  left 30%
+  z-index: 1
+
 .form-group
   margin-bottom 15px
 
@@ -18,8 +29,6 @@
 	margin 0
 	display block
 	opacity 1
-	-webkit-transition: .333s ease top, .333s ease opacity
-	transition .333s ease top, .333s ease opacity
 
 .form-control 
   border-color text
@@ -27,24 +36,59 @@
   border-radius 0
   border-style none none solid none
   box-shadow none
+  width 100%
 	
 .form-control:focus 
 	box-shadow none
 	border-color #9a0000
 
 .form-title
-  padding-top 66px
+  padding-top 56px
   h3
     font-size 36px
     font-family PtFont
     font-weight normal
     padding-left 50px
   &-desc
-    margin 15px 0 0 50px
+    margin-left 50px
     display block
+    font-size 18px
 
 .form-group
-  padding 37px 0 0 50px
+  padding 32.5px 50px 0 50px
+
+.label
+  font-size 14px
+  padding-left 15px
+
+.checkbox
+  display none
+  &-custom
+    position relative
+    size(20px)
+    border 1px solid #16263b
+
+.checkbox-custom,
+.label
+  display inline-block
+  vertical-align: middle
+
+.checkbox:checked + .checkbox-custom::before
+  content ''
+  absolute(2px, 2px, 2px, 2px)
+  display block
+  position absolute
+  background: #990000
+
+.general-button--mod
+  margin 30px 0 68px 50px
+  &:hover
+    background-color #cc0000
+    background-image none
+  &:active
+    background-color #a31c1d
+    background-image none
+
 ::-webkit-input-placeholder 
   opacity 0
 ::-moz-placeholder
