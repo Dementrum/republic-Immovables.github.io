@@ -78,14 +78,57 @@ function initMap() {
 google.maps.event.addDomListener(window, "load", initMap);
 
 // Scroll
+$(document).ready(function(){
+	$("#menu").on("click","a", function (event) {
+		event.preventDefault();
+		var id  = $(this).attr('href'),
+			top = $(id).offset().top;
+		$('body,html').animate({scrollTop: top}, 1200);
+	});
+});
+// Active class when scrolling
+
+var menu_selector = "#menu"; 
+function onScroll(){
+	var scroll_top = $(document).scrollTop();
+	$(menu_selector + " a").each(function(){
+		var hash = $(this).attr("href");
+		var target = $(hash);
+		if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
+			$(menu_selector + " a.active").removeClass("active");
+			$(this).addClass("active");
+		} else {
+			$(this).removeClass("active");
+		}
+	});
+}
+$(document).ready(function () {
+	$(document).on("scroll", onScroll);
+	$("a[href^='#']").click(function(e){
+		e.preventDefault();
+		$(document).off("scroll");
+		$(menu_selector + " a.active").removeClass("active");
+		$(this).addClass("active");
+		var hash = $(this).attr("href");
+		var target = $(hash);
+		$("html, body").animate({
+		    scrollTop: target.offset().top
+		}, 500, function(){
+			window.location.hash = hash;
+			$(document).on("scroll", onScroll);
+		});
+	});
+});
+
 $(document).ready(function() {
-  $("a.scrollto").click(function() {
-    var elementClick = $(this).attr("href")
-    var destination = $(elementClick).offset().top;
-    jQuery("html:not(:animated),body:not(:animated)").animate({
-      scrollTop: destination
-    }, 800);
-    return false;
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 200) {
+      $(".fixed").addClass("scrolled");
+    } else {
+      $(".fixed").removeClass("scrolled");
+    }
   });
 });
 // // Form
