@@ -2,7 +2,7 @@ $(document).ready(function () {
     svg4everybody({});
 });
 
-
+// Map
 function initMap() {
 	
 	var centerLatLng = new google.maps.LatLng(61.782450, 34.383180);
@@ -77,6 +77,17 @@ function initMap() {
 
 google.maps.event.addDomListener(window, "load", initMap);
 
+// Scroll
+$(document).ready(function() {
+  $("a.scrollto").click(function() {
+    var elementClick = $(this).attr("href")
+    var destination = $(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({
+      scrollTop: destination
+    }, 800);
+    return false;
+  });
+});
 // // Form
 
 // $(document).ready(function() {
