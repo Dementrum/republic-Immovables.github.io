@@ -19,7 +19,7 @@
   <body>
     <div class="wrapper">
       <div class="welcome__container">
-        <header class="container welcome_header">
+        <header class="container welcome-logo">
           <div class="header-logo"><a class="logo" href="/" title="Республика недвижимости" style="background-image: url(static/img/general/ramka_swirl.png);"> </a><a class="mobile-icon" href=""></a></div>
           <div class="header__nav-container">
             <nav class="header__nav">
@@ -121,10 +121,72 @@
         </div>
       </section>
       <section class="section map"> 
-        <div class="map__container">
+        <div class="form-container">
+          <form class="form" id="contact-form" action="#" method="POST" role="form">
+            <div class="form-title"> 
+              <h3>Бесплатная консультация</h3><span class="form-title-desc">Заполните заявку и мы свяжемся с Вами</span>
+            </div>
+            <div class="form-group form-group--name"> 
+              <label class="form-label" type="text" for="name">Ваше имя:</label>
+              <input class="form-control" id="name" type="text" name="name" placeholder="Ваше имя" tabindex="1" required>
+            </div>
+            <div class="form-group form-group--phone">
+              <label class="form-label" type="text" for="phone">Телефон:</label>
+              <input class="form-control" id="phone" type="text" name="phone" placeholder="Телефон:" tabindex="2" required>
+            </div>
+            <div class="form-group form-group--text">
+              <label class="form-label" type="text" for="tema">Тема заявки:</label>
+              <input class="form-control g-btn g-btn--secrets" id="text" type="text" name="tema" placeholder="Тема заявки:" tabindex="3" required>
+            </div>
+            <div class="form-group form-group--checkbox">
+              <label class="form-label form-label--checkbox">
+                <input class="checkbox form-control" id="check" type="checkbox" name="form-check"><span class="checkbox-custom"></span><span class="label">Даю свое согласие на обработку персональных данных</span>
+              </label>
+            </div>
+            <div class="general-button general-button--mod"><a class="general-button__link" href="">Отправить заявку</a></div>
+          </form>
+        </div>
+        <div class="map__container"> 
           <div class="map__object" id="map"></div>
         </div>
       </section>
+      <div class="welcome__container">
+        <footer>
+          <div class="container welcome-text">
+            <div class="footer-logo"><a class="logo" href="/" title="Республика недвижимости" style="background-image: url(static/img/general/ramka_swirl.png);">   </a></div>
+            <div class="footer-contacts">
+              <h3 class="footer-contacts__title">Агенство недвижимости Республика</h3>
+            </div>
+            <div class="footer-phone"><span>8(921) 727-03-90 </span></div>
+          </div>
+          <div class="container welcome-desc">
+            <address class="address">Адрес: Республика Карелия, г. Петрозаводск, ул. Правды, д. 6  </address>
+            <div class="footer-list">
+              <ul class="footer-office__list">Офис:
+                <li class="footer-office__item">(8142)445-007</li>
+                <li class="footer-office__item">(8142) 57-42-99</li>
+              </ul>
+              <ul class="footer-consultation__list">Консультации:
+                <li class="footer-consultation__item">(8142) 445-007</li>
+                <li class="footer-consultation__item">8(921) 727-03-90</li>
+              </ul>
+            </div>
+            <div class="footer-soc">
+              <p>Перейдите по ссылке <br> и посмотрите объекты:</p>
+              <ul class="nav-soc nac-soc--footer">
+                <li class="nav-soc__item"><a class="nav-soc__link" href="https://vk.com/club29519563" target="_blank">
+                    <svg class="icon icon-vk ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#vk"></use>
+                    </svg></a></li>
+                <li class="nav-soc__item"><a class="nav-soc__link" href="https://www.avito.ru/respublika" target="_blank">
+                    <svg class="icon icon-avito ">
+                      <use xlink:href="static/img/svg/symbol/sprite.svg#avito"></use>
+                    </svg></a></li>
+              </ul>
+            </div>
+          </div>
+        </footer><span class="copyright">Все права защищены. АН Республика. 2018 г.</span>
+      </div>
     </div>
     <script src="static/js/jquery.js"></script>
     <script src="static/js/libs.min.js"></script>
