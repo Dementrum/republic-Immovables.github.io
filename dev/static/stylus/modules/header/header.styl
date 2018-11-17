@@ -1,3 +1,43 @@
+.fixed
+	fixed()
+	width 100%
+	z-index 2
+
+.scrolled
+	height 400px
+	width 250px
+	display: flex
+	flex-direction: column
+	margin 20px
+	opacity 0.8
+	.welcome-logo
+		display flex
+		flex-direction: column
+	.header-logo
+		flex 0 1 36%
+		.logo
+			opacity 0
+	.header-logo--img 
+		absolute(0, 26%)
+		z-index 0
+	.nav-list
+		display flex
+		flex-direction: column
+	.header-phone .phone 
+		display flex
+	.header__nav
+		display flex
+		text-align: center
+		&__soc
+			top 100%
+			left: 26%
+		&-container
+			display flex
+			flex 0 1 35%
+	.header-nav__soc
+		top 100%
+		left 26%
+	
 .welcome
 	&__container
 		background-color maroon
@@ -77,8 +117,19 @@
 			width 20px
 			padding-top 5px
 
-
-		 
-    
-
+.nav-list__link
+	padding: 35px 0 35px 0
+	transition all 0.5s ease-out
+	&.active
+		color: #fdf8b4
+	&.active::after
+		content ''
+		display block
+		width 100%
+		height 1px
+		background #fdf8b4
+		
+.nav-list__item:last-child 
+	.nav-list__link 
+		padding 0
      

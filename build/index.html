@@ -18,17 +18,16 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="welcome__container">
+      <div class="welcome__container fixed">
         <header class="container welcome-logo">
           <div class="header-logo"><a class="logo" href="/" title="Республика недвижимости" style="background-image: url(static/img/general/ramka_swirl.png);"> </a><a class="mobile-icon" href=""></a></div>
           <div class="header__nav-container">
             <nav class="header__nav">
-              <ul class="nav-list">
-                <li class="nav-list__item nav-list__item--active"><a class="nav-list__link" href="#">Главная </a></li>
-                <li class="nav-list__item "><a class="nav-list__link" href="#">Услуги</a></li>
-                <li class="nav-list__item "><a class="nav-list__link" href="#">Преимущества</a></li>
-                <li class="nav-list__item "><a class="nav-list__link" href="#">Отзывы</a></li>
-                <li class="nav-list__item "><a class="nav-list__link" href="#">Контакты</a></li>
+              <ul class="nav-list" id="menu">
+                <li class="nav-list__item "><a class="nav-list__link" href="#general">Главная</a></li>
+                <li class="nav-list__item "><a class="nav-list__link" href="#services">Услуги</a></li>
+                <li class="nav-list__item "><a class="nav-list__link" href="#strength">Преимущества</a></li>
+                <li class="nav-list__item "><a class="nav-list__link" href="#reviews">Отзывы</a></li>
               </ul>
             </nav>
             <div class="header-nav__soc">
@@ -49,7 +48,7 @@
           <div class="header-logo header-logo--img"><img src="static/img/content/logo2.jpg" alt=""></div>
         </header>
       </div>
-      <section class="section general">
+      <section class="section general" id="general">
         <div class="container">
           <div class="container-desc">
             <div class="general-title">
@@ -62,7 +61,7 @@
           </div>
         </div>
       </section>
-      <section class="section our-services">
+      <section class="section our-services" id="services">
         <div class="our-services__left"></div>
         <div class="our-services__right">
           <h2 class="our-services__title">Наши услуги</h2>
@@ -89,7 +88,7 @@
           </div>
         </div>
       </section>
-      <section class="section our-strenght">
+      <section class="section our-strenght" id="strength">
         <div class="container our-strength__container">
           <h2 class="our-strength__title">Почему выбирают нас?</h2>
           <ul class="our-strength__nav">
@@ -108,7 +107,7 @@
           </ul>
         </div>
       </section>
-      <section class="section reviews">
+      <section class="section reviews" id="reviews">
         <div class="services-list">
           <h3 class="reviews-title">Таисия Дерюгина</h3>
           <p>Обратилась в АН "Республика" по совету коллеги. Владимир - настоящий профессионал, умеет объяснить сложные вопросы простым языком! Искали сразу вариант в заданном бюджете. На все просмотры Владимир ездил со мной, объяснял юридические вопросы, готовил документы. Нервный и сложный процесс стал простым, понятным и спокойным! Удачи, успеха Вам! Огромное спасибо!</p><a class="services-list__prev">
@@ -122,20 +121,20 @@
       </section>
       <section class="section map"> 
         <div class="form-container">
-          <form class="form" id="contact-form" action="#" method="POST" role="form">
+          <form class="form" id="contact-form" action="#" method="POST">
             <div class="form-title"> 
               <h3>Бесплатная консультация</h3><span class="form-title-desc">Заполните заявку и мы свяжемся с Вами</span>
             </div>
             <div class="form-group form-group--name"> 
-              <label class="form-label" type="text" for="name">Ваше имя:</label>
+              <label class="form-label">Ваше имя:</label>
               <input class="form-control" id="name" type="text" name="name" placeholder="Ваше имя" tabindex="1" required>
             </div>
             <div class="form-group form-group--phone">
-              <label class="form-label" type="text" for="phone">Телефон:</label>
+              <label class="form-label">Телефон:</label>
               <input class="form-control" id="phone" type="text" name="phone" placeholder="Телефон:" tabindex="2" required>
             </div>
             <div class="form-group form-group--text">
-              <label class="form-label" type="text" for="tema">Тема заявки:</label>
+              <label class="form-label">Тема заявки:</label>
               <input class="form-control g-btn g-btn--secrets" id="text" type="text" name="tema" placeholder="Тема заявки:" tabindex="3" required>
             </div>
             <div class="form-group form-group--checkbox">
@@ -162,11 +161,13 @@
           <div class="container welcome-desc">
             <address class="address">Адрес: Республика Карелия, г. Петрозаводск, ул. Правды, д. 6  </address>
             <div class="footer-list">
-              <ul class="footer-office__list">Офис:
+              <ul class="footer-office__list"> 
+                <li class="footer-office__item">Офис:</li>
                 <li class="footer-office__item">(8142)445-007</li>
                 <li class="footer-office__item">(8142) 57-42-99</li>
               </ul>
-              <ul class="footer-consultation__list">Консультации:
+              <ul class="footer-consultation__list"> 
+                <li class="footer-consultation__item">Консультации:</li>
                 <li class="footer-consultation__item">(8142) 445-007</li>
                 <li class="footer-consultation__item">8(921) 727-03-90</li>
               </ul>
