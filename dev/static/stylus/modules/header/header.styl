@@ -5,7 +5,7 @@
 
 .scrolled
 	height 400px
-	width 250px
+	max-width 130px
 	display: flex
 	flex-direction: column
 	margin 20px
@@ -13,32 +13,42 @@
 	.welcome-logo
 		display flex
 		flex-direction: column
-	.header-logo
-		flex 0 1 36%
-		.logo
-			opacity 0
-	.header-logo--img 
-		absolute(0, 26%)
-		z-index 0
+	.header
+		&-logo
+			flex 0 1 36%
+			.logo
+				opacity 0
+		&-logo--img 
+			absolute(0, 0)
+			z-index 0
+		&-phone
+			display flex
+			padding-top: 30px
+			flex-direction column
+			z-index 1
+			.phone
+				font-size 14px
 	.nav-list
 		display flex
 		flex-direction: column
 		&__link
-			padding 0
-	.header-phone .phone 
-		display flex
+			padding 5px 0 5px 0
+			font-size: 15px
+			&.active
+				text-decoration underline
+			&.active::after
+				display none
+	
 	.header__nav
 		display flex
 		text-align: center
-		&__soc
-			top 100%
-			left: 26%
 		&-container
 			display flex
 			flex 0 1 35%
+			padding-left: 5px;
 	.header-nav__soc
-		top 100%
-		left 26%
+		top 95%
+		left 18%
 	
 .welcome
 	&__container
@@ -66,17 +76,20 @@
 	&-phone
 		flex 0 1 20%
 		margin-top: 16px
+		a
+			color #fff
+			font-size 14px
+			text-decoration underline
+			line-height 1.4
+			display block
+			text-align center
 		.phone
 			display block
 			font-size 22px
 			color #f3dc9d
 			font-weight 600
 			text-align center
-			p
-				color #fff
-				font-size 14px
-				text-decoration underline
-				line-height 1.4
+	
 	&__nav
 		&-container
 			flex 0 1 45%
@@ -121,7 +134,6 @@
 
 .nav-list__link
 	padding: 35px 0 35px 0
-	transition all 0.5s ease-out
 	&.active
 		color: #fdf8b4
 	&.active::after
@@ -129,6 +141,7 @@
 		display block
 		width 100%
 		height 1px
+		text-decoration underline
 		background #fdf8b4
 		
 .nav-list__item:last-child 
