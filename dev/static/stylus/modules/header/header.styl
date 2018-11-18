@@ -55,7 +55,6 @@
 		background-color maroon
 	&-logo
 		flex 0 1 100%
-		row(flex-start, center)
 		flex-wrap wrap
 		relative()
 .header
@@ -68,15 +67,13 @@
 				background-repeat no-repeat
 				background-position left center
 				background-size contain
-				min-height 72px
-				min-width 226px
 				margin: 9px 0 9px 0
 		&--img
 			absolute(0, 0, 0)
 			z-index 1
 	&-phone
-		flex 0 1 20%
-		margin-top: 16px
+		// flex 0 1 20%
+		// 
 		a
 			color #fff
 			font-size 14px
@@ -107,7 +104,7 @@
 			&__link
 				color #fff
 				font-family  mainFont
-.header
+
 	&-nav__soc
 		absolute(6px, -50px)
 		z-index -1
@@ -149,16 +146,102 @@
 	.nav-list__link 
 		padding 0
 
-.mobile-menu__button
-		size(20px, 2px)
-		background-color #fff
-	&:before
-		content ''
-		display inline-block
-		size(20px, 2px)
-		background-color #fff
-	&:after
-		content ''
-		display inline-block
-		size(20px, 2px)
-		background-color #fff
+// Style for svg sandwich
+.ham 
+	cursor: pointer;
+	-webkit-tap-highlight-color: transparent;
+	transition: transform 600ms;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+.line 
+	fill none
+	transition stroke-dasharray 600ms, stroke-dashoffset 600ms
+	stroke #fff
+	stroke-width 5.5
+	stroke-linecap round
+
+.ham6 .top 
+	stroke-dasharray 40 172
+
+.ham6 .middle 
+	stroke-dasharray 40 111
+
+.ham6 .bottom 
+	stroke-dasharray 40 172
+
+.ham6.active .top 
+	stroke-dashoffset -132px
+
+.ham6.active .middle  
+	stroke-dashoffset  -71px 
+ 
+.ham6.active .bottom 
+	stroke-dashoffset: -132px 
+//media
+@media (max-width: 559px) 
+	.welcome-logo
+		row(center, center)
+	.header-phone
+		display none
+
+@media (max-width: 940px)
+	.header-logo
+		&--img
+			display none
+		.logo
+			min-height 64px
+			min-width 200px
+
+@media (min-width: 320px) and (max-width: 559px) 
+	.welcome-logo
+		row(space-between, center)
+	
+@media (min-width: 560px) and (max-width: 767px) 
+	.welcome-logo
+		row(space-around, center)
+
+@media (min-width: 559px) and (max-width: 767px) 
+	.header-phone
+		flex: 0 1 35%
+		margin: 0px 10px 0 -20px
+
+@media (min-width: 768px) and (max-width: 1029px) 
+	.header
+		&-phone
+			padding 0 110px
+		&-logo--img
+			padding-right 40px
+
+
+
+@media (min-width: 1029px) and (max-width: 2049px)
+	.sandwich 
+			display: none
+
+@media(min-width: 260px) and (max-width: 1030px) 
+	.header__nav-container
+		display none
+
+@media (min-width: 768px) and (max-width: 2048px)
+	.header-logo
+		// &--img
+		// 	display block
+		.logo
+			min-height 72px
+			min-width 226px
+	.welcome-logo
+		row(flex-start, center)
+	.header-phone
+		margin-top: 16px
+
+	
+
+
+
+
+
+
+
