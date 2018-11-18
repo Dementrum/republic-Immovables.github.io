@@ -124,7 +124,7 @@ $(document).ready(function() {
   $(window).scroll(function() {    
     var scroll = $(window).scrollTop();
 
-    if (scroll >= 200) {
+    if (scroll >= 510) {
       $(".fixed").addClass("scrolled");
     } else {
       $(".fixed").removeClass("scrolled");
