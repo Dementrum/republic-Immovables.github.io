@@ -1,6 +1,7 @@
 .container-desc
   flex 0 1 55%
   align-self center
+  transform: translateY(11%)
 .section
   height 100%
   overflow hidden
@@ -12,7 +13,7 @@
   background-repeat no-repeat
   background-size cover
   background-position center
-  min-height 590px
+  min-height 680px
   &-title
     font-family PtFont
   &-desc
@@ -20,9 +21,11 @@
     max-width: 80%
     font-size 24px
     line-height 32px
+    &__mobile
+      font-size 20px
   &-button
     display inline-block
-    margin-top 30px
+    margin-top 60px
     background-image: linear-gradient(to top, #990000 0%, #cc0000 100%)
     padding 23px 75px
     &__link
