@@ -53,6 +53,7 @@
 .welcome
 	&__container
 		background-color maroon
+		min-height 90px
 	&-logo
 		flex 0 1 100%
 		flex-wrap wrap
@@ -72,21 +73,19 @@
 			absolute(0, 0, 0)
 			z-index 1
 	&-phone
-		// flex 0 1 20%
-		// 
+		padding-top 21px
 		a
 			color #fff
-			font-size 14px
-			text-decoration underline
 			line-height 1.4
 			display block
 			text-align center
 		.phone
 			display block
-			font-size 22px
 			color #f3dc9d
 			font-weight 600
 			text-align center
+		.consult
+			text-decoration underline
 	
 	&__nav
 		&-container
@@ -181,61 +180,77 @@
 .ham6.active .bottom 
 	stroke-dashoffset: -132px 
 //media
-@media (max-width: 559px) 
-	.welcome-logo
-		row(center, center)
-	.header-phone
-		display none
 
-@media (max-width: 940px)
-	.header-logo
-		&--img
-			display none
-		.logo
-			min-height 64px
-			min-width 200px
-
-@media (min-width: 320px) and (max-width: 559px) 
-	.welcome-logo
-		row(space-between, center)
-	
-@media (min-width: 560px) and (max-width: 767px) 
-	.welcome-logo
-		row(space-around, center)
-
-@media (min-width: 559px) and (max-width: 767px) 
-	.header-phone
-		flex: 0 1 35%
-		margin: 0px 10px 0 -20px
-
-@media (min-width: 768px) and (max-width: 1029px) 
-	.header
-		&-phone
-			padding 0 110px
-		&-logo--img
-			padding-right 40px
-
-
-
-@media (min-width: 1029px) and (max-width: 2049px)
-	.sandwich 
-			display: none
-
-@media(min-width: 260px) and (max-width: 1030px) 
+@media(min-width: 260px) and (max-width: 920px) 
 	.header__nav-container
 		display none
 
-@media (min-width: 768px) and (max-width: 2048px)
-	.header-logo
-		// &--img
-		// 	display block
-		.logo
-			min-height 72px
-			min-width 226px
-	.welcome-logo
-		row(flex-start, center)
+@media (min-width: 320px) and (max-width: 1199px) 
 	.header-phone
-		margin-top: 16px
+		.phone
+			font-size 20px
+
+@media (min-width: 320px) and (max-width: 1199px) 
+	.welcome-logo
+		row(space-between, center)
+
+@media (max-width: 559px) 
+	.header-phone
+		display none
+	
+@media (min-width: 559px) and (max-width: 767px) 
+	.header-phone
+		flex: 0 1 40%
+		margin: 0px 10px 0 -20px
+
+@media (min-width: 560px) and (max-width: 767px) 
+	.welcome-logo
+		row(space-around, center)
+	.header
+		&-phone
+			.phone
+				font-size 18px
+
+@media (max-width: 767px)
+	.header-logo
+		&--img
+			display none
+	
+
+@media (min-width: 768px) and (max-width: 920px) 
+	.header
+		&-phone
+			flex 0 1 33%
+		&-logo--img
+			padding-right 40px
+	.sandwich
+		flex 0 1 28%
+		margin 0 auto
+	
+
+@media (min-width: 921px) and (max-width: 2048) 
+	.header
+		&__nav-container
+			display block
+
+@media (max-width: 940px)
+	.logo
+		min-height 64px
+		min-width 200px
+
+
+@media (min-width: 941px) and (max-width: 2048px)
+	.logo
+		min-height 72px
+		min-width 226px
+
+@media (min-width: 1029px) and (max-width: 2048px)
+	.sandwich 
+		display: none
+	
+
+
+
 
 	
 
