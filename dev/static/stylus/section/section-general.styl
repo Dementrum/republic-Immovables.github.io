@@ -1,5 +1,5 @@
 .container-desc
-  flex 0 1 55%
+  // flex 0 1 55%
   align-self center
   transform: translateY(11%)
 .section
@@ -14,6 +14,7 @@
   background-size cover
   background-position center
   min-height 680px
+  min-width 300px
   &-title
     font-family PtFont
   &-desc
@@ -27,8 +28,27 @@
     display inline-block
     margin-top 60px
     background-image: linear-gradient(to top, #990000 0%, #cc0000 100%)
-    padding 23px 75px
+    // padding 23px 75px
     &__link
       font-size: 18px
       font-weight 600
-      
+
+
+@media (max-width: 559px) 
+  .general-title
+    .title
+      text-align center
+
+@media (min-width: 560px) and (max-width: 768px) 
+  .general-title
+    .title
+      text-align left
+@media (min-width: 120px) and (max-width: 767px) 
+  .general
+    &-title
+      .title
+        font-size 32px
+    &-desc__mobile
+      display none
+    &-button
+      padding 22px 60px

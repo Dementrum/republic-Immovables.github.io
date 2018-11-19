@@ -62,7 +62,7 @@
 	&-logo
 		max-width 100%
 		height auto
-		flex 0 1 24%
+		flex 0 1 20%
 		.logo
 				display flex
 				background-repeat no-repeat
@@ -86,7 +86,7 @@
 			text-align center
 		.consult
 			text-decoration underline
-	
+			font-size 14px
 	&__nav
 		&-container
 			flex 0 1 45%
@@ -181,36 +181,29 @@
 	stroke-dashoffset: -132px 
 //media
 
-@media(min-width: 260px) and (max-width: 920px) 
+@media (max-width: 920px) 
 	.header__nav-container
 		display none
 
-@media (min-width: 320px) and (max-width: 1199px) 
+@media (max-width: 1199px) 
 	.header-phone
 		.phone
 			font-size 20px
-
-@media (min-width: 320px) and (max-width: 1199px) 
 	.welcome-logo
 		row(space-between, center)
-
 @media (max-width: 559px) 
 	.header-phone
 		display none
 	
 @media (min-width: 559px) and (max-width: 767px) 
-	.header-phone
-		flex: 0 1 40%
-		margin: 0px 10px 0 -20px
-
-@media (min-width: 560px) and (max-width: 767px) 
 	.welcome-logo
 		row(space-around, center)
 	.header
 		&-phone
+				flex: 0 1 40%
+				margin: 0px 10px 0 -27px
 			.phone
 				font-size 18px
-
 @media (max-width: 767px)
 	.header-logo
 		&--img
@@ -220,33 +213,46 @@
 @media (min-width: 768px) and (max-width: 920px) 
 	.header
 		&-phone
-			flex 0 1 33%
-		&-logo--img
-			padding-right 40px
+			flex 0 1 39%
 	.sandwich
-		flex 0 1 28%
+		flex 0 1 24%
 		margin 0 auto
-	
-
-@media (min-width: 921px) and (max-width: 2048) 
+@media (min-width: 840px) and (max-width: 920px) 
+	.header
+		&-logo--img
+			padding-left 40px
+@media (min-width: 921px) and (max-width: 1199px) 
 	.header
 		&__nav-container
-			display block
-
+			flex: 0 1 50%
+		&-phone 
+			.phone
+				font-size 18px
+		&-logo--img
+			display none
+@media (min-width: 921px) and (max-width: 2048px) 
+	.sandwich
+		display none
 @media (max-width: 940px)
 	.logo
 		min-height 64px
 		min-width 200px
-
-
+	
 @media (min-width: 941px) and (max-width: 2048px)
 	.logo
 		min-height 72px
 		min-width 226px
+@media (min-width: 979px) and (max-width: 2048px)
+	.header-phone
+		flex 0 25.5%
 
-@media (min-width: 1029px) and (max-width: 2048px)
-	.sandwich 
-		display: none
+@media (min-width: 1201px) and (max-width: 2048px)
+	.welcome-logo
+		align-items: center
+	.header-phone
+		.phone
+			font-size 22px
+			
 	
 
 

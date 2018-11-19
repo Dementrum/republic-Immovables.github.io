@@ -25,12 +25,15 @@
 
 
 /* Portrait tablets and medium desktops */
-@media (min-width: 1200px) and (max-width: 2047px) 
+@media (min-width: 1400px) and (max-width: 2047px) 
   .container 
     padding: 0 
 
+@media(min-width: 921px) and (max-width: 1399px)
+  .container 
+    padding: 0 20px
 
-@media(min-width: 768px) and (max-width: 1028px)
+@media(min-width: 768px) and (max-width: 920px)
   .container 
     padding: 0 40px
 
@@ -39,47 +42,44 @@
     padding: 0 20px
 
 /* Portrait tablets and small desktops */
-@media (max-width: 1024px) {
-  .scrolled {
+@media (max-width: 1024px)
+  .scrolled
     display none  
-  }
-}
 
-@media (min-width: 921px) and (max-width: 1200px) {
-.container-desc {
-    flex: 0 1 80%
-  }
-}
+@media (min-width: 921px) and (max-width: 1200px) 
+  .container-desc 
+      flex: 0 1 80%
 
-@media (min-width: 767px) and (max-width: 920px) {
-.container-desc {
-    flex: 0 1 80%
-  }
-}
+@media(max-width: 767px) 
+  .container-desc
+    max-width 465px
+    padding-left: 20px
+
+@media (min-width: 768px) and (max-width: 920px)
+  .container-desc 
+      flex: 0 1 80%
+
+@media(max-width: 559px) 
+  .container-desc 
+      align-items center
+      display flex
+      flex-direction: column
+      max-width: 350px
+      margin: 0 auto
+
 /* Landscape phones and smaller */
 @media (min-width: 320px) and (max-width: 767px) {
   .header-nav__soc {
     display none
   }
-
-  
   .general{
     min-height: 570px  
-  }
-  .general-title  h1 {
-    font-size 40px
-  }
-  .container-desc {
-    flex: 0 1 83%
   }
   .general-desc {
     display none
   }
   .general-button {
     margin-top 40px
-  }
-  .general-desc__mobile {
-    padding-top 30px
   }
   .our-services__left {
     flex: 0 1 27%
