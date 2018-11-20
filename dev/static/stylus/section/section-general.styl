@@ -32,7 +32,12 @@
       font-size: 18px
       font-weight 600
 
-
+@media (max-width: 336px)
+  .general-title .title 
+      font-size 28px
+@media (min-width: 337px) and (max-width: 768px)
+  .general-title .title 
+      font-size 30px
 @media (max-width: 559px) 
   .general-title
     .title
@@ -43,15 +48,11 @@
   .container-desc
     max-width 425px
     padding-left 20px
-@media (min-width: 560px) and (max-width: 768px) 
   .general-title
-    .title
-      text-align left
+      .title
+        text-align left
 @media (max-width: 767px) 
   .general
-    &-title
-      .title
-        font-size 30px
     &-desc__mobile
       display none
     &-button
@@ -76,11 +77,14 @@
 @media (max-width: 1170px) 
   .general
     min-height: 570px
-@media (min-width: 1171px) and (max-width: 2048px) 
+@media (min-width: 1170px) and (max-width: 2048px) 
   .general
     &-title
       .title
         font-size 48px
+    &-desc
+      &__mobile
+        display none
     &-button
       padding 25px 75px 
   .container-desc

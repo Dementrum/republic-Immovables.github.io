@@ -4,30 +4,31 @@
   flex-direction: row
   background-size contain
   background-image linear-gradient(to top, #a31c1d 0%, #cc0000 100%)
+  margin-top -1px
   relative()
   &__left
-    min-height 640px 
+    // min-height 640px 
     display flex
-    flex 0 1 40%
+    // flex 0 1 40%
     background-size contain
     background url(../img/content/city-2.jpg) no-repeat left 
   &__right
     col(flex-start, center)
-    flex: 0 1 32%
+    // flex: 0 1 32%
   &__title
-    font-size 36px
+    // font-size 36px
     color #ffffff
     font-family PtFont
     font-weight normal
-    margin-top 70px
+    // margin-top 70px
 
 .nav-list
   &-services
-    margin-top 50px
-    display flex
-    justify-content space-between
-    min-width 500px
-    padding-left 30px
+    // margin-top 50px
+    // display flex
+    // justify-content space-between
+    // min-width 500px
+    // padding-left 30px
     &__item
       text-align center
       &--active
@@ -42,27 +43,29 @@
     background-color #fff
     width 100px
     height 2px
+    margin-top 5px
 
 .services-list
   background #fff
-  width: 720px
-  min-height: 320px
+  // width: 720px
+  // min-height: 320px
   display flex
   align-items: center
   justify-content: center
   box-shadow: 0 4px 43px rgba(0, 0, 0, 0.14)
-  absolute()
-  transform: translate(0%, 70%)
+  // absolute()
+  // transform: translate(0%, 70%)
   &__item
-    font-size 20px
+    // font-size 20px
     font-weight normal
     padding 15px 0 0 10px
+    line-height 1.5
     &.note
       &:before
         content ''
         font-family fontawesome
         display inline-block
-        font-size 20px
+        // font-size 20px
         color #ca0611
         margin-right 10px
     &.cheet
@@ -90,22 +93,98 @@
         color #ca0611
         margin-right 10px
   &__prev
-    absolute(, 85px, -15px) 
+    // absolute(, 85px, -15px) 
     cursor pointer
     border: 1px solid #16263b
     background-color #fff
     padding 17px 20px
+    margin-right 4.5px
     .icon-arrow
       size(15px)
       
   &__next
-    absolute(, 0, -15px)
+    // absolute(, 0, -15px)
     cursor pointer
     border: 1px solid #16263b
     background-color #fff
     padding 17px 20px
+    margin-left 4.5px
     .icon-right-arrow
       size(15px)
+
+@media (min-width: 320px) and (max-width: 450px) 
+  .nav-list
+    &-services
+      display flex
+      &__item
+        display none
+      &__item:first-child
+        display block
+  .our-services 
+    &__right
+      min-width: 320px
+      border-bottom: 40px solid #fafafa
+    &__title
+      font-size 28px
+      padding 42px 0 10px 0
+    &__left
+      min-height 560px
+  .services-list
+    // transform: translate(0%, 40%)
+    margin-top 24px
+    &__nav
+      padding 27px 19px
+    &__next
+      position absolute
+      left 50%
+      bottom 0
+    &__prev
+      absolute(, 50%, 0) 
+      
+@media (min-width: 451px) and (max-width: 767px)
+  .our-services 
+    &__left
+      min-height 560px 
+      flex 0 1 25%
+    &__right
+      flex: 0 1 75%
+    &__title
+      margin-top 40px
+      font-size 28px
+  .services-list
+    transform: translate(0%, 10%)
+  .nav-list
+    min-width 300px
+// @media (min-width: 451px)
+//   .our-services 
+//     &__title
+//       font-size 36px
+@media (min-width: 451px) and (max-width: 2048px) 
+  .nav-list
+    &-services
+      display flex
+      margin-top 32px
+      justify-content space-around
+      min-width: 360px
+      display flex
+      flex-direction row
+// @media (min-width: 320px) and (max-width: 767px) 
+  
+//   .our-services__left {
+//     flex: 0 1 27%
+//     min-height 570px
+//   }
+//   .our-services__right {
+//    margin 0 auto 
+//   }
+//   .nav-list-services {
+//     padding 0
+//     justify-content: space-around
+//   }
+//   .services-list {
+//     transform: translate(-13%, 70%)
+//   }
+// }
      
 
     
