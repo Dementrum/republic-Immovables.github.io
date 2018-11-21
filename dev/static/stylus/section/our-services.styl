@@ -11,7 +11,7 @@
     display flex
     // flex 0 1 40%
     background-size contain
-    background url(../img/content/city-2.jpg) no-repeat left 
+    // background url(../img/content/city-2.jpg) no-repeat left 
   &__right
     col(flex-start, center)
     // flex: 0 1 32%
@@ -43,7 +43,7 @@
     background-color #fff
     width 100px
     height 2px
-    margin-top 5px
+    margin-top 10px
 
 .services-list
   background #fff
@@ -58,8 +58,7 @@
   &__item
     // font-size 20px
     font-weight normal
-    padding 15px 0 0 10px
-    line-height 1.5
+    // padding 15px 0 0 10px
     &.note
       &:before
         content ''
@@ -112,7 +111,7 @@
     .icon-right-arrow
       size(15px)
 
-@media (min-width: 320px) and (max-width: 450px) 
+@media (min-width: 320px) and (max-width: 499px) 
   .nav-list
     &-services
       display flex
@@ -130,7 +129,11 @@
     &__left
       min-height 560px
   .services-list
-    // transform: translate(0%, 40%)
+    &__item
+      padding 15px 0 0 10px
+      line-height 1.6
+    &__item:last-child
+      padding-bottom 15px
     margin-top 24px
     &__nav
       padding 27px 19px
@@ -140,51 +143,80 @@
       bottom 0
     &__prev
       absolute(, 50%, 0) 
-      
-@media (min-width: 451px) and (max-width: 767px)
+@media (min-width: 451px) and (max-width: 500px) 
+  .our-services__right 
+    border-bottom: 112px solid #fafafa 
+  .services-list
+    &__prev
+      bottom 13%  
+    &__next
+      bottom 13% 
+@media (min-width: 500px) and (max-width: 767px)
+  .services-list
+    min-height: 320px
+    padding: 0 20px
+    &__prev
+      absolute(, 60px, -15px)
+    &__next
+      absolute(, 0, -15px)
+    &__item
+      font-size 18px
+  .nav-list
+    min-width 300px
+@media (min-width: 500px) and (max-width: 1169px)
   .our-services 
+    min-height 560px 
     &__left
-      min-height 560px 
       flex 0 1 25%
     &__right
       flex: 0 1 75%
     &__title
-      margin-top 40px
       font-size 28px
   .services-list
-    transform: translate(0%, 10%)
-  .nav-list
-    min-width 300px
-// @media (min-width: 451px)
-//   .our-services 
-//     &__title
-//       font-size 36px
-@media (min-width: 451px) and (max-width: 2048px) 
+    &__item
+      line-height 1.8
+@media (min-width: 768px) and (max-width: 1169px)
+  .services-list
+    transform: translateX(-11%)
+    min-height: 320px
+    min-width: 720px
+    &__prev
+      absolute(, 60px, -15px)
+    &__next
+      absolute(, 0, -15px)
+    &__item
+      font-size 19px
+@media (min-width: 500px) and (max-width: 2048px) 
+  .our-services
+    &__left
+      background: url(../img/content/city-2.jpg) no-repeat -210px
+    &__title
+      margin-top 60px
   .nav-list
     &-services
       display flex
       margin-top 32px
       justify-content space-around
-      min-width: 360px
+      min-width: 500px
       display flex
       flex-direction row
-// @media (min-width: 320px) and (max-width: 767px) 
-  
-//   .our-services__left {
-//     flex: 0 1 27%
-//     min-height 570px
-//   }
-//   .our-services__right {
-//    margin 0 auto 
-//   }
-//   .nav-list-services {
-//     padding 0
-//     justify-content: space-around
-//   }
-//   .services-list {
-//     transform: translate(-13%, 70%)
-//   }
-// }
+  .services-list
+    top 38%
+    min-height 320px
+    absolute()
+  .nav-list
+    min-width 300px
+@media (min-width: 1170px) and (max-width: 2048px)
+  .our-services
+    min-height 640px
+    &__left
+      background: url(../img/content/city-2.jpg) no-repeat left
+      flex 0 1 45%
+    &__right
+      flex: 0 1 55%
+  .services-list
+    min-width 720px
+
      
 
     
