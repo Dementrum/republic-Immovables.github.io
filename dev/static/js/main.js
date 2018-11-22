@@ -150,6 +150,13 @@ $(document).ready(function () {
 
 	});
 });
+
+// Mobile nav
+$('#mobile-menu-button').on('click', function(event) {
+  event.preventDefault();
+  $(this).toggleClass('active');
+  $('nav').slideToggle("fast");
+});
 // // Form
 
 // $(document).ready(function() {
