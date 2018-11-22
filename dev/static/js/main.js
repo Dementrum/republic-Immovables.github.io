@@ -113,7 +113,7 @@ $(document).ready(function () {
 		var target = $(hash);
 		$("html, body").animate({
 		    scrollTop: target.offset().top
-		}, 500, function(){
+		}, 200, function(){
 			window.location.hash = hash;
 			$(document).on("scroll", onScroll);
 		});
@@ -130,6 +130,25 @@ $(document).ready(function() {
       $(".fixed").removeClass("scrolled");
     }
   });
+});
+
+// Read more...
+$(document).ready(function () {
+	$(".content").hide();
+
+	$(".toggle").on("click", function (e) {
+			
+			var $this = $(this).prev('.content');
+			var $text = $(this);
+			$this.slideToggle('fast', function () {
+					if ($(this).is(':visible')) {
+							$text.text('Скрыть');
+					} else {
+							$text.text('Читать далее...');
+					}
+			});
+
+	});
 });
 // // Form
 

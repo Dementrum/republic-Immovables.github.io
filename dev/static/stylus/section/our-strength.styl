@@ -13,48 +13,10 @@
     flex-wrap wrap
   &__item
     text-align center
-    &:first-child
-      // padding 0 10px
     p
-      // font-size 20px
       line-height 1.4
-      text-align center
       flex-direction: column
       display flex
-    // &.skyline::before
-    //   content ''
-    //   display block
-    //   size(54px, 40px)
-    //   background-image url('../img/content/skyline.svg')
-    //   background-size 100%
-    //   background-repeat no-repeat
-    //   margin 0 auto
-    // &.placeholder
-    //   &::before
-    //     content ''
-    //     display block
-    //     size(56px, 60px)
-    //     background-image url('../img/content/placeholder.svg')
-    //     background-size 100%
-    //     margin 0 auto
-    //     background-repeat no-repeat
-    // &.house-key::before
-    //   content ''
-    //   display block
-    //   size(56px, 60px)
-    //   background-image url('../img/content/house-key.svg')
-    //   background-size 100%
-    //   margin 0 auto
-    //   background-repeat no-repeat
-    
-    // &.contract::before
-    //   content ''
-    //   display block
-    //   size(56px, 60px)
-    //   background-image url('../img/content/contract.svg')
-    //   background-size 100%
-    //   margin 0 auto
-    //   background-repeat no-repeat
 .border 
   display block
   size(70px, 2px)
@@ -108,7 +70,10 @@
       min-height 450px
     &__item
       display flex
-      flex: 0 1 45%
+      flex: 0 1 43%
+      p 
+        text-align left
+        padding-top 10px
     &__title--mobile
       display none
     &__nav
@@ -122,8 +87,16 @@
         size(65px, 55px)
     .container-icon
       padding-right 10px
-@media (min-width: 860px) and (max-width: 2048px)
+@media (min-width: 824px) and (max-width: 1034px)
+  .our-strength__item
+    padding-right calc(4%)
+@media (min-width: 1035px) and (max-width: 1185px)
+  .our-strength__item
+    padding-right calc(9%)
+@media (min-width: 1170px) and (max-width: 2048px)
   .our-strength
+    &__container
+      min-height 420px
     &__item
       flex: 0 1 19%
     &__title--mobile

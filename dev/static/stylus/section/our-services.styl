@@ -40,6 +40,13 @@
   align-items: center
   justify-content: center
   box-shadow: 0 4px 43px rgba(0, 0, 0, 0.14)
+  min-height 320px
+  &--mobile,
+  &__reviews
+    background #fff
+    display flex
+    align-items: left 
+    flex-direction: column
   &__item
     font-weight normal
     &.note
@@ -133,14 +140,15 @@
       bottom 13% 
 @media (min-width: 500px) and (max-width: 767px)
   .services-list
-    min-height: 320px
+    min-height: 300px
     padding: 0 20px
+    margin-right 10px
     &__prev
       absolute(, 60px, -15px)
     &__next
       absolute(, 0, -15px)
     &__item
-      font-size 18px
+      font-size 16px
   .nav-list
     min-width 300px
   .our-services__title
@@ -168,13 +176,12 @@
       flex-direction row
   .services-list
     top 38%
-    min-height 320px
     absolute()
     &__item
       line-height 1.8
   .nav-list
     min-width 300px
-@media (min-width: 768px) and (max-width: 1169px)
+@media (min-width: 766px) and (max-width: 1169px)
   .services-list
     transform: translateX(-11%)
     min-height: 320px
@@ -207,16 +214,16 @@
     min-height 640px
     &__title
       margin-top 80px
-      padding-right calc(15%)
+      padding-right 33%
       font-size 36px
   .services-list
       min-width 770px
-      transform: translateX(-9%)
+      transform: translateX(-23%)
     &__item
       font-size 20px
   .our-services__right
     .nav-list
-      padding-right calc(15%)
+      padding-right 33%
       &-services
         margin-top 32px
 @media (min-width: 1600px) and (max-width: 2048px)
