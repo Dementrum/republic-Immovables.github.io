@@ -4,7 +4,7 @@ footer
 .welcome-text
     display flex
     flex-direction row
-    justify-content space-between
+    // justify-content space-between
     margin-top: 32px
     flex-wrap wrap
 .footer
@@ -14,9 +14,12 @@ footer
         display flex
         background-repeat no-repeat
         background-size contain
-        min-height 90px
-        min-width 230px
-
+        // min-height 90px
+        // min-width 230px
+  &.nav-soc__link 
+    svg
+      width 120px
+      height 60px
 .welcome-desc
   display flex
   flex-direction row
@@ -32,12 +35,12 @@ footer
  
 .footer-contacts
   h3
-    font-size 24px
+    // font-size 24px
     font-weight 600
   &__title
     margin-top 25px
 .footer-phone
-  font-size 26px
+  // font-size 26px
   font-weight 600
   margin-top 25px
 
@@ -56,8 +59,8 @@ footer
   font-size 14px
   
 .nac-soc--footer
-  margin-top -10px
-  margin-bottom -10px
+  // margin-top -10px
+  // margin-bottom -10px
 
 .copyright
   color #cccc99
@@ -65,3 +68,48 @@ footer
   display block
   text-align center
   padding-bottom 5px
+.nav-soc--footer
+    .icon-vk 
+      width 32px
+    .icon-avito
+      height 60px
+      margin-left 10px
+      width 115px
+@media(min-width: 320px) and (max-width: 480px)
+  .welcome-text 
+    justify-content: center
+  .footer
+    &-logo
+      .logo
+          min-height 64px
+          min-width 200px
+    &-contacts 
+      h3 
+        font-size 15px
+    &-phone 
+      font-size 22px 
+    &-list
+      display none
+    &-mobile
+      text-align center
+      padding 20px 0
+    &-soc 
+        p 
+          display none
+  .nav-soc--footer
+    justify-content center
+    padding-left 45px
+  
+  .address
+    display none
+  .welcome-desc
+    justify-content center
+
+    
+  // .nav-soc--footer
+  //   .icon-vk 
+  //     width 32px
+  //   .icon-avito
+  //     height 60px
+  //     margin-left 10px
+  //     width 115px
