@@ -41,16 +41,11 @@
     font-size 20px
 @media(min-width: 560px) and (max-width: 768px)
   .services
-    &-title
-      font-size 36px
     &-list
       &__reviews
         max-width: 89%
         padding 50px 30px
         margin: 0 auto
-        p
-          font-size 16px
-          line-height 1.5
   .reviews-title
     font-size 24px 
   .services-list
@@ -67,13 +62,47 @@
       font-size 36px
     &-list
       &__reviews
-        max-width: 89%
-        padding 50px 30px
-        margin: 0 auto
         p
           font-size 16px
           line-height 1.5
-// @media(min-width: 560px) and (max-width: 768px)
+@media(min-width: 769px) and (max-width: 1270px)
+  .services
+    &-list
+      &__reviews
+        max-width: 70%
+        padding 50px 30px
+        p 
+          line-height 1.5
+@media(min-width: 769px) and (max-width: 2048px)
+  .services
+    &-title
+      font-size 36px
+    &-list
+      &__reviews
+        min-height 320px
+        margin: 0 auto
+        position relative
+      &__prev,
+      &__next
+        display block
+  .reviews-title
+      font-size 24px 
+    .services-list
+      &--mobile
+        display none 
+      &__reviews
+        display block
+     
+@media(min-width: 1271px) and (max-width: 2048px)
+  .services
+    &-list
+      &__reviews
+        max-width: 970px
+        padding 80px 60px
+        p 
+          line-height 1.8
+          font-size 18px
+
 
 
 

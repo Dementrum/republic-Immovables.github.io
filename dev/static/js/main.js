@@ -66,11 +66,11 @@ function initMap() {
 	var map = new google.maps.Map(document.getElementById("map"), mapOptions);
 	
 	var myMarker = new google.maps.Marker({ 
-		position: new google.maps.LatLng(61.782793, 34.383885), 
+		position: new google.maps.LatLng(61.782510, 34.384360), 
 		map: map,
 		draggable: false,
 		animation: google.maps.Animation.DROP, 
-    icon: "static/img/content/maps-and-flags.svg" 
+    	icon: "static/img/content/maps-and-flags.svg" 
 	}); 
 
 }
@@ -154,8 +154,8 @@ $(document).ready(function () {
 // Mobile nav
 $('#mobile-menu-button').on('click', function(event) {
   event.preventDefault();
-  $(this).toggleClass('active');
-  $('nav').slideToggle("fast");
+  $(this).toggleClass('fast');
+  $('.header__nav').slideToggle("fast");
 });
 // // Form
 

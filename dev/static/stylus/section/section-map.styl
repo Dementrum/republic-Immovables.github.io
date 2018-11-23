@@ -2,61 +2,58 @@
   min-height 720px
   display flex
   &__container
-    flex 0 1 60%
+    // flex 0 1 60%
     margin-top auto
   &__object
-    height calc(100% - 70px)
+    // height calc(100% - 70px)
     min-height 650px
 
 .form-container
-  flex: 0 0 40%
+  // flex: 0 0 40%
   position relative
 
 .form
-  min-width: 550px
+  // min-width: 550px
   background #fff
   box-shadow: 0 4px 43px rgba(0, 0, 0, 0.14)
   position absolute
-  top 5%
-  left 30%
+  // top 5%
+  // left 30%
   z-index: 1
 
 .form-group
   margin-bottom 15px
 
-.form-label 
+.form-label  
 	font-size 18px
-	margin 0
+	margin 0 0 25px 0 
 	display block
 	opacity 1
-
+.form-label--checkbox
+  position relative
 .form-control 
   border-color text
   border-width 0 0 1px 0
   border-radius 0
   border-style none none solid none
   box-shadow none
-  width 100%
-	
+  width 100%	
 .form-control:focus 
 	box-shadow none
 	border-color #9a0000
 
 .form-title
-  padding-top 56px
+  padding-top 40px
   h3
-    font-size 36px
+    // font-size 36px
     font-family PtFont
     font-weight normal
-    padding-left 50px
+    // padding-left 50px
+    text-align center
   &-desc
     margin-left 50px
     display block
     font-size 18px
-
-.form-group
-  padding 32.5px 50px 0 50px
-
 .label
   font-size 14px
   padding-left 15px
@@ -64,15 +61,17 @@
 .checkbox
   display none
   &-custom
-    position relative
+    position absolute
+    top 25%
     size(20px)
     border 1px solid #16263b
-
 .checkbox-custom,
 .label
   display inline-block
   vertical-align: middle
-
+  &-mobile
+    display block
+    margin-left 15px
 .checkbox:checked + .checkbox-custom::before
   content ''
   absolute(2px, 2px, 2px, 2px)
@@ -81,7 +80,10 @@
   background: #990000
 
 .general-button--mod
-  margin 30px 0 68px 50px
+  display block
+  text-align center
+  margin-top 0
+  margin-bottom 40pxs
   &:hover
     background-color #cc0000
     background-image none
@@ -97,4 +99,26 @@
   opacity 0
 :-ms-input-placeholder
   opacity 0
+@media (min-width: 320px) and (max-width: 560px)
+  .form
+    min-width 100vw
+    &-title
+      h3 
+        font-size 28px
+    &-group
+      padding-left calc(8%)
+      padding-right calc(8%)
+      padding-top calc(10%)
+    &-title-desc
+      display none
+  .label.desctop
+    display none
+  .label-mobile
+    font-size 14px
+    padding-left 15px
+  .map__container
+    margin-top calc(100vh - 405px)
+    width 100% 
+
+  
 
