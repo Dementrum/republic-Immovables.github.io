@@ -77,61 +77,53 @@ function initMap() {
 
 google.maps.event.addDomListener(window, "load", initMap);
 
-// Scroll
+//Scroll
 $(document).ready(function(){
 	$("#menu").on("click","a", function (event) {
 		event.preventDefault();
 		var id  = $(this).attr('href'),
-			top = $(id).offset().top;
-		$('body,html').animate({scrollTop: top}, 1200);
+			top = $(id).offset().top - 74;
+		$('body,html').animate({scrollTop: top}, 500);
 	});
 });
-// Active class when scrolling
-
-var menu_selector = "#menu"; 
-function onScroll(){
-	var scroll_top = $(document).scrollTop();
-	$(menu_selector + " a").each(function(){
-		var hash = $(this).attr("href");
-		var target = $(hash);
-		if (target.position().top <= scroll_top && target.position().top + target.outerHeight() > scroll_top) {
-			$(menu_selector + " a.active").removeClass("active");
-			$(this).addClass("active");
-		} else {
-			$(this).removeClass("active");
-		}
-	});
-}
+//Active class when scrolling
 $(document).ready(function () {
 	$(document).on("scroll", onScroll);
-	$("a[href^='#']").click(function(e){
+
+	$('a[href^="#"]').on('click', function (e) {
 		e.preventDefault();
 		$(document).off("scroll");
-		$(menu_selector + " a.active").removeClass("active");
-		$(this).addClass("active");
-		var hash = $(this).attr("href");
-		var target = $(hash);
-		$("html, body").animate({
-		    scrollTop: target.offset().top
-		}, 200, function(){
-			window.location.hash = hash;
+
+		$('a').each(function () {
+			$(this).removeClass('active');
+		})
+		$(this).addClass('active');
+
+		var target = this.hash;
+		$target = $(target);
+		$('html, body').stop().animate({
+			'scrollTop': $target.offset().top+2
+		}, 500, 'swing', function () {
+			window.location.hash = target;
 			$(document).on("scroll", onScroll);
 		});
 	});
 });
 
-$(document).ready(function() {
-  $(window).scroll(function() {    
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 100) {
-      $(".fixed").addClass("scrolled");
-    } else {
-      $(".fixed").removeClass("scrolled");
-    }
-  });
-});
-
+function onScroll(event){
+	var scrollPosition = $(document).scrollTop();
+	$('nav a').each(function () {
+		var currentLink = $(this);
+		var refElement = $(currentLink.attr("href"));
+		if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
+			$('nav ul li a').removeClass("active");
+			currentLink.addClass("active");
+		}
+		else{
+			currentLink.removeClass("active");
+		}
+	});
+}
 // Read more...
 $(document).ready(function () {
 	$(".content").hide();
