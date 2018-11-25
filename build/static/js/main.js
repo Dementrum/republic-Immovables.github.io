@@ -1,3 +1,4 @@
+
 $(document).ready(function () {
     svg4everybody({});
 });
@@ -77,53 +78,49 @@ function initMap() {
 
 google.maps.event.addDomListener(window, "load", initMap);
 
-//Scroll
-$(document).ready(function(){
-	$("#menu").on("click","a", function (event) {
-		event.preventDefault();
-		var id  = $(this).attr('href'),
-			top = $(id).offset().top - 74;
-		$('body,html').animate({scrollTop: top}, 500);
-	});
-});
-//Active class when scrolling
 $(document).ready(function () {
-	$(document).on("scroll", onScroll);
-
-	$('a[href^="#"]').on('click', function (e) {
-		e.preventDefault();
-		$(document).off("scroll");
-
-		$('a').each(function () {
-			$(this).removeClass('active');
+	window.onscroll = (function(){
+		let $sections = $('.section');
+		$sections.each(function(i,el){
+			let top = $(el).offset().top - 100;
+			let bottom = top +$(el).height();
+			let scroll = $(window).scrollTop();
+			let id = $(el).attr('id');
+			if( scroll > top && scroll < bottom){
+				$('a.active').removeClass('active');
+				$('a[href="#'+id+'"]').addClass('active');
+			}
 		})
-		$(this).addClass('active');
+	 });
 
-		var target = this.hash;
-		$target = $(target);
-		$('html, body').stop().animate({
-			'scrollTop': $target.offset().top+2
-		}, 500, 'swing', function () {
-			window.location.hash = target;
-			$(document).on("scroll", onScroll);
-		});
+	 $('.nav-list__link').on('click', function(e){
+		e.preventDefault();
+		let scroll_el = $(this).attr('href'),
+				scroll    = $(scroll_el).offset().top;
+		
+		$('html, body').animate({
+			scrollTop: scroll - 74
+		}, 300);
 	});
 });
 
-function onScroll(event){
-	var scrollPosition = $(document).scrollTop();
-	$('nav a').each(function () {
-		var currentLink = $(this);
-		var refElement = $(currentLink.attr("href"));
-		if (refElement.position().top <= scrollPosition && refElement.position().top + refElement.height() > scrollPosition) {
-			$('nav ul li a').removeClass("active");
-			currentLink.addClass("active");
-		}
-		else{
-			currentLink.removeClass("active");
-		}
-	});
-}
+
+$(document).ready(function() {
+  $(window).scroll(function() {    
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 300) {
+      $(".fixed").addClass("scrolled");
+    } else {
+      $(".fixed").removeClass("scrolled");
+    }
+  });
+});
+
+	
+// $('.single-slide').slick();
+
+
 // Read more...
 $(document).ready(function () {
 	$(".content").hide();
@@ -144,73 +141,28 @@ $(document).ready(function () {
 });
 
 // Mobile nav
-$('#mobile-menu-button').on('click', function(event) {
-  event.preventDefault();
-  $(this).toggleClass('fast');
-  $('.header__nav').slideToggle("fast");
-});
-// // Form
-
-// $(document).ready(function() {
-// 	// Test for placeholder support
-//     $.support.placeholder = (function(){
-//         var i = document.createElement('input');
-//         return 'placeholder' in i;
-//     })();
-
-//     // Hide labels by default if placeholders are supported
-//     if($.support.placeholder) {
-//         $('.form-label').each(function(){
-//             $(this).addClass('js-hide-label');
-//         });  
-
-//         // Code for adding/removing classes here
-//         $('.form-group').find('input, textarea').on('keyup blur focus', function(e){
-            
-//             // Cache our selectors
-//             var $this = $(this),
-//                 $parent = $this.parent().find("label");
-					
-// 						switch(e.type) {
-// 							case 'keyup': {
-// 								 $parent.toggleClass('js-hide-label', $this.val() == '');
-// 							} break;
-// 							case 'blur': {
-// 								if( $this.val() == '' ) {
-//                     $parent.addClass('js-hide-label');
-//                 } else {
-//                     $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
-//                 }
-// 							} break;
-// 							case 'focus': {
-// 								if( $this.val() !== '' ) {
-//                     $parent.removeClass('js-unhighlight-label');
-//                 }
-// 							} break;
-// 							default: break;
-// 						}
-// 						// previous implementation with ifs
-//             if (e.type == 'keyup') {
-//                 if( $this.val() == '' ) {
-//                     $parent.addClass('js-hide-label'); 
-//                 } else {
-//                     $parent.removeClass('js-hide-label');   
-//                 }                     
-//             } 
-//             else if (e.type == 'blur') {
-//                 if( $this.val() == '' ) {
-//                     $parent.addClass('js-hide-label');
-//                 } 
-//                 else {
-//                     $parent.removeClass('js-hide-label').addClass('js-unhighlight-label');
-//                 }
-//             } 
-//             else if (e.type == 'focus') {
-//                 if( $this.val() !== '' ) {
-//                     $parent.removeClass('js-unhighlight-label');
-//                 }
-//             }
-//         });
-//     } 
+// $('#mobile-menu-button').on('click', function(event) {
+//   event.preventDefault();
+//   $(this).toggleClass('fast');
+//   $('.header__nav').slideToggle("fast");
 // });
 
+//owl carousel
+// $(document).ready(function(){
+//   $(".owl-carousel").owlCarousel();
+// });
+// $(document).ready(function() {
+ 
+  $(document).ready(function () {
+    //initialize swiper when document ready
+		var swiper = new Swiper('.swiper-container', {
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    })
+  });
