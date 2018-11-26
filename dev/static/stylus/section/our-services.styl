@@ -11,6 +11,7 @@
     background-size contain
   &__right
     col(flex-start, center)
+    position relative
   &__title
     color #ffffff
     font-family PtFont
@@ -97,6 +98,19 @@
     margin-left 4.5px
     .icon-right-arrow
       size(15px)
+.bx-wrapper
+  display flex
+.bx
+  &-prev
+    padding: 27px
+    position: absolute
+    top: 0
+    left: 0
+  &-next
+    padding: 27px
+    position: absolute
+    top: 0
+    left: 0
 
 @media (min-width: 320px) and (max-width: 499px) 
   .nav-list
@@ -235,27 +249,10 @@
       background-size cover
     &__right
       flex: 0 1 55%
-.swiper-container 
-  width: 780px;
-  height: 400px;
 
-.swiper-slide 
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
+
+
+
       
 
      

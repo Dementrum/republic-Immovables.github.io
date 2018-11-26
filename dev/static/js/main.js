@@ -117,8 +117,7 @@ $(document).ready(function() {
   });
 });
 
-	
-// $('.single-slide').slick();
+
 
 
 // Read more...
@@ -139,30 +138,32 @@ $(document).ready(function () {
 
 	});
 });
-
 // Mobile nav
 // $('#mobile-menu-button').on('click', function(event) {
 //   event.preventDefault();
 //   $(this).toggleClass('fast');
 //   $('.header__nav').slideToggle("fast");
 // });
-
-//owl carousel
-// $(document).ready(function(){
-//   $(".owl-carousel").owlCarousel();
-// });
-// $(document).ready(function() {
- 
-  $(document).ready(function () {
-    //initialize swiper when document ready
-		var swiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    })
+$(document).ready(function(){
+  $('.bxslider').bxSlider({
+    mode: 'horizontal',
+		speed: 500,
+		adaptiveHeight: true,
+		adaptiveWidth: true,
+		responsive: true,
+		preventDefaultSwipeY: true,
+		keyboardEnabled: true,
+		nextSelector: '#pronext',
+		prevSelector: '#proprev',
+		prevText: '',   
+		nextText: '',
+		minSlides: 1,
+		maxSlides: 1,
+		slideWidth: 600,
+		slideMargin: 5
   });
+});  
+
+
+
+ 

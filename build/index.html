@@ -9,8 +9,7 @@
     <meta property="og:image" content="path/to/image.jpg">
     <link href="https://fonts.googleapis.com/css?family=PT+Serif" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/css/swiper.min.css">
+    <link href=" https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css ">
     <link rel="stylesheet" type="text/css" href="static/css/main.css"><!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js"></script><![endif]-->
     <title>Главная страница </title>
@@ -81,40 +80,27 @@
               <li class="nav-list-services__item "><a class="nav-list-services__link" href="">Другие</a></li>
             </ul>
           </nav>
-          <div class="swiper-container">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="services-list">
-                  <ul class="services-list__nav">
-                    <li class="services-list__item note">Профессиональная оценка объекта недвижимости</li>
-                    <li class="services-list__item cheet">Предпродажная подготовка к продаже объекта недвижимости</li>
-                    <li class="services-list__item search">Поиск покупателя в обширной клиентской базе</li>
-                    <li class="services-list__item key">Организация и проведение сделки купли-продажи <br>(от составления договоров до передачи ключей покупателям )</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="swiper-slide">
-                <div class="services-list">
-                  <ul class="services-list__nav">
-                    <li class="services-list__item note">Профессиональная оценка объекта недвижимости</li>
-                    <li class="services-list__item cheet">Предпродажная подготовка к продаже объекта недвижимости</li>
-                    <li class="services-list__item search">Поиск покупателя в обширной клиентской базе</li>
-                    <li class="services-list__item key">Организация и проведение сделки купли-продажи <br>(от составления договоров до передачи ключей покупателям )</li>
-                  </ul>
-                </div>
-              </div>
-            </div><a class="services-list__prev">
+          <div class="services-list">
+            <div class="bxslider">
+              <ul class="services-list__nav">
+                <li class="services-list__item note">Профессиональная оценка объекта недвижимости</li>
+                <li class="services-list__item cheet">Предпродажная подготовка к продаже объекта недвижимости</li>
+                <li class="services-list__item search">Поиск покупателя в обширной клиентской базе</li>
+                <li class="services-list__item key">Организация и проведение сделки купли-продажи <br>(от составления договоров до передачи ключей покупателям )</li>
+              </ul>
+              <ul class="services-list__nav">
+                <li class="services-list__item note">Профессиональная оценка объекта недвижимости</li>
+                <li class="services-list__item cheet">Предпродажная подготовка к продаже объекта недвижимости</li>
+                <li class="services-list__item search">Поиск покупателя в обширной клиентской базе</li>
+                <li class="services-list__item key">Организация и проведение сделки купли-продажи <br>(от составления договоров до передачи ключей покупателям )</li>
+              </ul>
+            </div><a class="services-list__prev" id="pronext">
               <svg class="icon icon-arrow ">
                 <use xlink:href="static/img/svg/symbol/sprite.svg#arrow"></use>
-              </svg></a><a class="services-list__next">
+              </svg></a><a class="services-list__next" id="proprev">
               <svg class="icon icon-right-arrow ">
                 <use xlink:href="static/img/svg/symbol/sprite.svg#right-arrow"></use>
               </svg></a>
-            <div class="swiper-pagination">
-              <!-- Add Arrows-->
-            </div>
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
           </div>
         </div>
       </section>
@@ -261,13 +247,10 @@
     </div>
     <script src="static/js/jquery.js"></script>
     <script src="static/js/libs.min.js"></script>
-    <script src="static/js/owl.carousel.min.js"></script>
+    <script src="static/js/slick.min.js"></script>
     <script src="//maps.googleapis.com/maps/api/js?key=AIzaSyAIQyrHP2oEDlsUF8AJmyd9R0vtRDKlOo8&amp;amp;sensor=false&amp;amp;language=en&amp;amp;ver=4.6.12"></script>
     <script src="static/js/main.js"></script>
     <script src="https://use.fontawesome.com/72c23d4204.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.x.x/js/swiper.esm.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.2/js/swiper.esm.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
   </body>
 </html>
