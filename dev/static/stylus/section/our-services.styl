@@ -21,20 +21,17 @@
   &-services
     &__item
       text-align center
-      &--active
-          a
-            color #ffffcc
     &__link
       font-size: 23px 
-
-.nav-list-services__item::after
-    content ''
-    display block
-    background-color #fff
-    width 100px
-    height 2px
-    margin-top 10px
-
+      &.active
+        color #ffffcc
+        &::after
+          content ''
+          display block
+          background-color #fff
+          width 100px
+          height 2px
+          margin-top 10px
 .services-list
   background #fff
   display flex
@@ -141,17 +138,12 @@
     &__next
       position absolute
       left 50%
-      bottom 0
+      bottom -40px
     &__prev
-      absolute(, 50%, 0) 
+      absolute(, 50%, -40px) 
 @media (min-width: 451px) and (max-width: 500px) 
   .our-services__right 
     border-bottom: 112px solid #fafafa 
-  .services-list
-    &__prev
-      bottom 13%  
-    &__next
-      bottom 13% 
 @media (min-width: 500px) and (max-width: 767px)
   .services-list
     min-height: 300px
@@ -209,7 +201,7 @@
   .our-services__right
     .nav-list
       padding-right calc(15%)
-@media (min-width: 768px) and (max-width: 2048px)
+@media (min-width: 767px) and (max-width: 2048px)
   .services-list
     &__prev
       absolute(, 60px, -15px)
@@ -249,45 +241,11 @@
       background-size cover
     &__right
       flex: 0 1 55%
-<<<<<<< HEAD
-.swiper-container 
-  width: 30%;
-  height: 15%;
-.swiper-slide 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-.swiper-button-next, 
-.swiper-container-rtl,
-.swiper-button-prev
-  background-image none
-.swiper-button-next,
-.swiper-button-prev 
-  size(0)
-  margin-top 0
-  bottom 0
-  top 94%
-  z-index 100
-  background #fff
-.swiper-button-prev
-  right: 60px
-  bottom: -15px
-  left 66%
-  top 84%
-.swiper-button-next
-  right 0
-  bottom 0
-  left 72%
-  top 84%
-  
-
-=======
 
 
 
 
       
->>>>>>> 54662da58a2849e64d4da93d1f5f2e36f39155b9
 
      
 

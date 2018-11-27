@@ -117,10 +117,6 @@ $(document).ready(function() {
   });
 });
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 54662da58a2849e64d4da93d1f5f2e36f39155b9
 
 
 // Read more...
@@ -150,14 +146,15 @@ $(document).ready(function () {
 $(document).ready(function(){
   $('.bxslider').bxSlider({
     mode: 'horizontal',
-		speed: 500,
-		adaptiveHeight: true,
+		speed: 800,
+		// adaptiveHeight: true,
 		adaptiveWidth: true,
 		responsive: true,
 		preventDefaultSwipeY: true,
 		keyboardEnabled: true,
 		nextSelector: '#pronext',
 		prevSelector: '#proprev',
+		pagerCustom: '#bx-pager',
 		prevText: '',   
 		nextText: '',
 		minSlides: 1,
@@ -167,39 +164,6 @@ $(document).ready(function(){
   });
 });  
 
-<<<<<<< HEAD
-//owl carousel
-// $(document).ready(function(){
-//   $(".owl-carousel").owlCarousel();
-// });
-// $(document).ready(function() {
- 
-  $(document).ready(function () {
-    //initialize swiper when document ready
-		var swiper = new Swiper('.swiper-container', {
-			speed: 500,
-			spaceBetween: 100,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-			},
-			keyboard: {
-				enabled: true,
-				onlyInViewport: false,
-			},
-      // pagination: {
-      //   el: '.swiper-pagination',
-			// 	type: 'fraction',
-			
-      // },
-      navigation: {
-        nextEl: '.services-list__next',
-        prevEl: '.services-list__prev',
-      },
-    })
-  });
-=======
 
 
  
->>>>>>> 54662da58a2849e64d4da93d1f5f2e36f39155b9
