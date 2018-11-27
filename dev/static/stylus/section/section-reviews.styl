@@ -8,6 +8,13 @@
   &-title
     padding-bottom 25px
     font-weight normal
+  &-mobile
+    &__one,
+    &__two,
+    &__three,
+    &__four
+      display flex
+      flex-direction: column
 .toggle
   cursor pointer 
   border-bottom: 1px solid #000030
@@ -22,6 +29,8 @@
   &-list
     &__reviews
       display none
+
+
 @media(min-width: 320px) and (max-width: 560px)
   .services
     &-title
