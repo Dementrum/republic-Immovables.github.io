@@ -2,7 +2,15 @@ section.section.our-services#services
   .our-services__left
   .our-services__right
     h2.our-services__title Наши услуги
-    +nav-soc('nav-list-services', [{name: 'Продажа', href:''}, {name: 'Покупка', href:''},{name: 'Другие', href:''}],0) 
+    //- +nav-soc('nav-list-services', [{name: 'Продажа', href:''}, {name: 'Покупка', href:''},{name: 'Другие', href:''}],0) 
+    nav.nav-list#bx-pager
+      ul.nav-list-services
+        li.nav-list-services__item
+          a.nav-list-services__link(data-slide-index='0' href='') Продажа
+        li.nav-list-services__item
+          a.nav-list-services__link(data-slide-index='1' href='') Покупка
+        li.nav-list-services__item
+          a.nav-list-services__link(data-slide-index='2' href='') Другие
     .services-list
       .services-slider
         ul.services-list__nav
@@ -16,14 +24,24 @@ section.section.our-services#services
             | Организация и проведение сделки купли-продажи <br>(от составления договоров до передачи ключей покупателям )
         ul.services-list__nav
           li.services-list__item.note
-            | Профессиональная оценка объекта недвижимости
+            | Оформление ипотек в ведущих банках г.Петрозаводск
           li.services-list__item.cheet
-            | Предпродажная подготовка к продаже объекта недвижимости
+            | Подбор недвижимости с учетом пожеланий покупателя
           li.services-list__item.search
-            | Поиск покупателя в обширной клиентской базе
+            | Юридическая экспертиза документов, предоставленных <br> продавцом по продаваемому обьекту недвижимости 
           li.services-list__item.key
             | Организация и проведение сделки купли-продажи <br>(от составления договоров до передачи ключей покупателям )
-  
+        ul.services-list__nav
+          li.services-list__item.note
+            | Составление договоров купли-продажи недвижимости
+          li.services-list__item.cheet
+            | Юридическое сопровождение сделки купли-продажи <br> обьектов недвижимости
+          li.services-list__item.search
+            | Срочный выкуп обьектов недвижимости
+          li.services-list__item.key
+            | Содействие в приватизации жилых помещений
+          li.services-list__item.key
+            | Представительство в суде
       a.services-list__prev#pronext
         +icon('arrow')
       a.services-list__next#proprev

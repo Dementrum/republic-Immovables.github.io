@@ -119,7 +119,6 @@ $(document).ready(function() {
 
 
 
-
 // Read more...
 $(document).ready(function () {
 	$(".content").hide();
@@ -147,14 +146,15 @@ $(document).ready(function () {
 $(document).ready(function(){
   $('.services-slider').bxSlider({
     mode: 'horizontal',
-		speed: 500,
-		adaptiveHeight: true,
+		speed: 800,
+		// adaptiveHeight: true,
 		adaptiveWidth: true,
 		responsive: true,
 		preventDefaultSwipeY: true,
 		keyboardEnabled: true,
 		nextSelector: '#pronext',
 		prevSelector: '#proprev',
+		pagerCustom: '#bx-pager',
 		prevText: '',   
 		nextText: '',
 		minSlides: 1,
