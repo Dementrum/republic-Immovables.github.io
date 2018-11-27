@@ -145,7 +145,7 @@ $(document).ready(function () {
 //   $('.header__nav').slideToggle("fast");
 // });
 $(document).ready(function(){
-  $('.bxslider').bxSlider({
+  $('.services-slider').bxSlider({
     mode: 'horizontal',
 		speed: 500,
 		adaptiveHeight: true,
