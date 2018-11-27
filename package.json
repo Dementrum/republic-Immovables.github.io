@@ -44,7 +44,6 @@
   "dependencies": {
     "normalize.css": "^7.0.0",
     "npm": "^6.4.1",
-    "owl.carousel": "^2.3.4",
     "svg4everybody": "^2.1.8"
   }
 }
