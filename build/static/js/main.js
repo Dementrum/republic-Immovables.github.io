@@ -117,8 +117,6 @@ $(document).ready(function() {
   });
 });
 
-	
-// $('.single-slide').slick();
 
 
 // Read more...
@@ -156,13 +154,24 @@ $(document).ready(function () {
   $(document).ready(function () {
     //initialize swiper when document ready
 		var swiper = new Swiper('.swiper-container', {
+			speed: 500,
+			spaceBetween: 100,
       pagination: {
         el: '.swiper-pagination',
-        type: 'fraction',
-      },
+        clickable: true,
+			},
+			keyboard: {
+				enabled: true,
+				onlyInViewport: false,
+			},
+      // pagination: {
+      //   el: '.swiper-pagination',
+			// 	type: 'fraction',
+			
+      // },
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
+        nextEl: '.services-list__next',
+        prevEl: '.services-list__prev',
       },
     })
   });

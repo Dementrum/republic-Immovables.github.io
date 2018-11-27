@@ -117,8 +117,6 @@ $(document).ready(function() {
   });
 });
 
-	
-// $('.single-slide').slick();
 
 
 // Read more...
@@ -147,22 +145,3 @@ $(document).ready(function () {
 //   $('.header__nav').slideToggle("fast");
 // });
 
-//owl carousel
-// $(document).ready(function(){
-//   $(".owl-carousel").owlCarousel();
-// });
-// $(document).ready(function() {
- 
-  $(document).ready(function () {
-    //initialize swiper when document ready
-		var swiper = new Swiper('.swiper-container', {
-      pagination: {
-        el: '.swiper-pagination',
-        type: 'fraction',
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-    })
-  });
