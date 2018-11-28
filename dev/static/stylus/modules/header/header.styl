@@ -132,15 +132,36 @@
 
 // Style for svg sandwich
 .mobile
-	min-width: 230px
+	max-width: 230px
 	min-height 320px
 	background #fff
-	absolute($top: 0)
+	padding-left 25px
+	absolute($top: 0, $left: 0)
+	&-nav
+		display flex
+		flex-direction: row
+		justify-content space-between
+		flex-wrap wrap
+		max-width 75%
+		min-height 130px
+		
 	.header-nav__soc
 		position relative
 		right 0
 		top 0
 		display block
+		z-index: 1
+	.header-phone
+		display flex
+		flex-direction: column
+		order -1
+		.phone
+			color #993333
+			text-align left
+		.consult 
+			color #000
+			text-align left
+			padding 25px 0
 	&-nav__link
 		color: #000033
 		font-size: 14px
@@ -149,6 +170,8 @@
 			fill #000033
 		&-avito
 			fill #000033
+	.nav-soc__link
+		margin-right 25px
 
 .sandwich
 	position relative

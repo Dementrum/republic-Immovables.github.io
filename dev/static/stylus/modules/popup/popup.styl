@@ -1,0 +1,58 @@
+.overlay 
+  position: fixed;
+  display: none;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+
+
+.overlay .popup 
+  position: fixed;
+  color: #000;
+  background: #fff;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  height: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%)
+  padding: 10px;
+  box-sizing: border-box
+  
+  
+
+
+  .overlay .popup-close 
+    position: absolute
+    right: -20px
+    top: -35px
+    cursor: pointer
+    font-size: 35px
+    color: #000
+    text-align end
+  
+
+
+  .overlay .popup-title 
+    display: block
+    color: #000
+    width: 50%
+    height: 51px
+    line-height: 51p;
+    margin: 0
+    text-transform: uppercase
+    font-size: 21px
+    font-weight: 500
+    text-align: center
+  
+
+
+  .overlay .popup-text 
+    display: block
+    margin-top: 23px
+    font-size: 20px
+    font-weight: 300
+    text-align: center
+  
