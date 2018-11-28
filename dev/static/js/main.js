@@ -214,35 +214,68 @@ $(window).load(function() {
 	});
 });
 //Form
-let statusMessage = document.createElement('div');
+// let statusMessage = document.createElement('div');
+
+// input = document.querySelectorAll('input');
+
+// document.body.addEventListener('submit', (e) => { 
+//     let target = e.target;
+//     e.preventDefault();
+
+   
+// });
+// $(document).ready(function() {
+//     $('#form').submit(function(e) { 
+//         e.preventDefault()
+//         $.ajax({
+//             type: "POST",
+//             url: "mail.php",
+//             data: $(this).serialize()
+//         }).done(function() {
+//             console.log('Ок');
+//             $(this).find('input').val('');
+//             $('#form').trigger('reset');
+//         });
+//         return false;
+//     });
+// });
+
+// document.body.addEventListener('submit', (e) => { 
+//     e.preventDefault();
+//     for(let i = 0; i < input.length; i++){
+//         input[i].value = '';
+//     }
+// });
+//form
+
 
 input = document.querySelectorAll('input');
 
 document.body.addEventListener('submit', (e) => { 
-    let target = e.target;
-    e.preventDefault();
+	let target = e.target;
+	e.preventDefault();
 
    
 });
 $(document).ready(function() {
-    $('#form').submit(function(e) { 
-        e.preventDefault()
-        $.ajax({
-            type: "POST",
-            url: "mail.php",
-            data: $(this).serialize()
-        }).done(function() {
-            console.log('Ок');
-            $(this).find('input').val('');
-            $('#form').trigger('reset');
-        });
-        return false;
-    });
+	$('#form').submit(function(e) { 
+		e.preventDefault(); 
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $(this).serialize()
+		}).done(function() {
+			console.log('Ок');
+			$(this).find('input').val('');
+			$('#form').trigger('reset');
+		});
+		return false;
+	});
 });
 
-document.body.addEventListener('submit', (e) => { 
+document.body.addEventListener('submit', (e) => {  
     e.preventDefault();
-    for(let i = 0; i < input.length; i++){
-        input[i].value = '';
-    }
+	for(let i = 0; i < input.length; i++){
+				input[i].value = '';
+	}
 });
