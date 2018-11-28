@@ -150,7 +150,7 @@ $(document).ready(function(){
 		// adaptiveHeight: true,
 		adaptiveWidth: true,
 		responsive: true,
-		preventDefaultSwipeY: true,
+		preventDefaultSwipeY: false,
 		keyboardEnabled: true,
 		nextSelector: '#pronext',
 		prevSelector: '#proprev',
