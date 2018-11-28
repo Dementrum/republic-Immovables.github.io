@@ -23,6 +23,20 @@
       text-align center
     &__link
       font-size: 23px 
+      line-height: 1
+      position relative
+      &:after
+        display block
+        content ''
+        size(0%, 2px)
+        left: 50%
+        position absolute
+        background-color #ffffcc
+        transition width .3s ease-in-out
+        transform:translateX(-50%)
+      &:hover:after,
+      &:focus:after
+        width 100%  
       &.active
         color #ffffcc
         &::after
@@ -39,6 +53,8 @@
   justify-content: center
   box-shadow: 0 4px 43px rgba(0, 0, 0, 0.14)
   min-height 320px
+  &--mobile
+    margin-bottom 20px
   &--mobile,
   &__reviews
     background #fff
@@ -78,6 +94,31 @@
         font-size 20px
         color #ca0611
         margin-right 10px
+    &.doc
+      &:before
+        content ''
+        font-family fontawesome
+        display inline-block
+        font-size 20px
+        color #ca0611
+        margin-right 10px
+    &.legal
+      &:before
+        content ''
+        font-family fontawesome
+        display inline-block
+        font-size 20px
+        color #ca0611
+        margin-right 10px
+    &.calculate
+      &:before
+        content:"\f0f7";
+        font-family fontawesome
+        display inline-block
+        font-size 20px
+        color #ca0611
+        margin-right 10px
+
   &__prev
     cursor pointer
     border: 1px solid #16263b
@@ -97,6 +138,7 @@
       size(15px)
 .bx-wrapper
   display flex
+  margin 0 auto
 .bx
   &-prev
     padding: 27px
