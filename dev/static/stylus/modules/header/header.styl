@@ -131,6 +131,25 @@
 		padding 0
 
 // Style for svg sandwich
+.mobile
+	min-width: 230px
+	min-height 320px
+	background #fff
+	absolute($top: 0)
+	.header-nav__soc
+		position relative
+		right 0
+		top 0
+		display block
+	&-nav__link
+		color: #000033
+		font-size: 14px
+	.icon
+		&-vk
+			fill #000033
+		&-avito
+			fill #000033
+
 .sandwich
 	position relative
 	cursor pointer
@@ -171,7 +190,6 @@
 //media
 @media (min-width: 320px) and (max-width: 767px)
 	.header-nav__soc 
-			display none
 		.general-desc 
 			display none  
 		.general-button 
@@ -180,7 +198,8 @@
 @media (max-width: 920px) 
 	.header__nav-container
 		display none
-
+	.general-desc 
+			display: none
 @media (max-width: 1199px) 
 	.header-phone
 		.phone
