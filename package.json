@@ -39,7 +39,8 @@
     "nib": "^1.1.2",
     "postcss-custom-properties": "^7.0.0",
     "postcss-fontpath": "^1.0.0",
-    "rucksack-css": "^1.0.2"
+    "rucksack-css": "^1.0.2",
+    "slick-carousel": "^1.8.1"
   },
   "dependencies": {
     "normalize.css": "^7.0.0",
