@@ -1,4 +1,4 @@
-.padding#form
+.padding#form-section
 section.section.map
   .form-container
     form#form.form(name='form')
@@ -10,7 +10,7 @@ section.section.map
         input.form-control#name(type="name" name="name" placeholder="Ваше имя" tabindex="1" required onKeyUp="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}" )
       .form-group.form-group--phone
         label.form-label Телефон:
-        input.form-control#phone( name="phone" placeholder="Телефон:" tabindex="2" required onkeyup="this.value = this.value.replace (/[^0-9+]/g, '')")
+        input.form-control#phone( type="text" name="phone" placeholder="Телефон:" tabindex="2" required onkeyup="this.value = this.value.replace (/[^0-9+]/g, '')").g-input
       .form-group.form-group--text
         label.form-label Тема заявки:
         input.form-control#text(type="text" name="tema" placeholder="Тема заявки:" tabindex="3" required onKeyUp="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}")
@@ -21,7 +21,7 @@ section.section.map
           span.label.desctop Даю свое согласие на обработку персональных данных
           span.label-mobile Cогласие на обработку персональных данных
       button.general-button.general-button--mod
-        a.general-button__link Отправить заявку
+        span.general-button__link Отправить заявку
     
   .map__container 
     .map__object#map

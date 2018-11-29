@@ -56,15 +56,29 @@
     font-size: 20px
 @media (min-width: 631px) and (max-width: 768px)
   .overlay .popup 
-    justify-content: center
     max-width 95%
     min-height: 38%
     
   .overlay .popup-text 
-    text-align: center
     margin-top: 14px
+    
+  .overlay .popup-title 
+    font-size: 30px
+@media (min-width: 631px) and (max-width: 2048px)
+  .overlay .popup 
+    justify-content: center
+  .overlay .popup-text 
+    text-align: center
     span:first-child
       display block
       line-height 1.5
-  .overlay .popup-title 
-    font-size: 30px
+  .overlay .popup-text 
+    text-align: center
+    margin-top: 14px   
+@media (min-width: 769px) and (max-width: 2048px)
+  .overlay .popup 
+    max-width 700px
+    min-height: 31%
+    
+ 
+ 

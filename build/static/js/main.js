@@ -234,36 +234,76 @@ popup.addEventListener('click', (e)=>{
 popupClose.addEventListener('click', (e)=>{
     popup.style.display = 'none'; 
 });
+
+// Validate
+$(function(){
+	$('#form').validate({
+		rules:{
+
+			name:{
+					required: true,
+					minlength: 2,
+					maxlength: 16,
+			},
+
+			phone:{
+					required: true,
+					minlength: 5,
+					maxlength: 16,
+			},
+			tema:{
+				required: true,
+				minlength: 6,
+				maxlength: 16,
+		}
+ },
+	 messages: {
+		name: {
+		required: "Поле 'Имя' обязательно к заполнению",
+		minlength: "Введите не менее 2-х символов в поле 'Имя'"
+	},
+		phone: {
+		required: "Поле 'Телефон' обязателен к заполнению",
+		minlength: "Введите не менее 5-х символов в поле 'Телефон"
+		},
+		tema: {
+			required: "Опишите вашу задачу",
+			minlength: "Введите не менее 6-х символов в поле 'Тема"
+		},
+	 }
+	});
+ }); 
 //form
 
 
-input = document.querySelectorAll('input');
+// input = document.querySelectorAll('input');
 
-document.body.addEventListener('submit', (e) => { 
-	let target = e.target;
-	e.preventDefault();
+// document.body.addEventListener('submit', (e) => { 
+// 	let target = e.target;
+// 	e.preventDefault();
 
    
-});
-$(document).ready(function() {
-	$('#form').submit(function(e) { 
-		e.preventDefault(); 
-		$.ajax({
-			type: "POST",
-			url: "mail.php",
-			data: $(this).serialize()
-		}).done(function() {
-			console.log('Ок');
-			$(this).find('input').val('');
-			$('#form').trigger('reset');
-		});
-		return false;
-	});
-});
+// });
+// $(document).ready(function() {
+// 	$('#form').submit(function(e) { 
+// 		e.preventDefault(); 
+// 		$.ajax({
+// 			type: "POST",
+// 			url: "mail.php",
+// 			data: $(this).serialize()
+// 		}).done(function() {
+// 			console.log('Ок');
+// 			$(this).find('input').val('');
+// 			$('#form').trigger('reset');
+// 		});
+// 		return false;
+// 	});
+// });
 
-document.body.addEventListener('submit', (e) => {  
-    e.preventDefault();
-	for(let i = 0; i < input.length; i++){
-				input[i].value = '';
-	}
-});
+// document.body.addEventListener('submit', (e) => {  
+//     e.preventDefault();
+// 	for(let i = 0; i < input.length; i++){
+// 				input[i].value = '';
+// 	}
+// });
+
