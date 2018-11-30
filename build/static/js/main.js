@@ -180,25 +180,25 @@ $(".mobile-nav__link").click(function() {
 })
 //bx-slider
 
-$(window).load(function(){
-$('.services-slider').bxSlider({
-	mode: 'horizontal',
-	touchDrag: false,
-	adaptiveWidth: true,
-	responsive: true,
-	keyboardEnabled: true,
-	nextSelector: '#pronext',
-	prevSelector: '#proprev',
-	pagerCustom: '#bx-pager',
-	prevText: '',   
-	nextText: '',
-	minSlides: 1,
-	maxSlides: 1,
-	slideWidth: 600,
-	slideMargin: 5,
-	startSlide: 0
-});
-});  
+// $(window).load(function(){
+// $('.services-slider').bxSlider({
+// 	mode: 'horizontal',
+// 	touchDrag: false,
+// 	adaptiveWidth: true,
+// 	responsive: true,
+// 	keyboardEnabled: true,
+// 	nextSelector: '#pronext',
+// 	prevSelector: '#proprev',
+// 	pagerCustom: '#bx-pager',
+// 	prevText: '',   
+// 	nextText: '',
+// 	minSlides: 1,
+// 	maxSlides: 1,
+// 	slideWidth: 600,
+// 	slideMargin: 5,
+// 	startSlide: 0
+// });
+// });  
 });
 //Popup overlay
 let popup = document.querySelector('.overlay')
@@ -314,7 +314,16 @@ $(function(){
 		arrows: false
 		}
 	);
-
+	$('.services-slider').slick({
+		arrows: false
+		}
+	);
+	$('#pronext').on('click', function() {
+		$('.services-slider').slick('slickNext');
+	});
+	$('#proprev').on('click', function() {
+		$('.services-slider').slick('slickPrev');
+	});
 	$(document).ready(function(){
 		$("#formID").submit(function() { //устанавливаем событие отправки для формы с id=form
 				var form_data = $(this).serialize(); //собераем все данные из формы

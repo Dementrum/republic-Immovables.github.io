@@ -136,22 +136,25 @@
     margin-left 4.5px
     .icon-right-arrow
       size(15px)
-.bx-wrapper
-  display flex
-  margin 0 auto
-.bx
-  &-prev
-    padding: 27px
-    position: absolute
-    top: 0
-    left: 0
-  &-next
-    padding: 27px
-    position: absolute
-    top: 0
-    left: 0
-
+// .bx-wrapper
+//   display flex
+//   margin 0 auto
+// .bx
+//   &-prev
+//     padding: 27px
+//     position: absolute
+//     top: 0
+//     left: 0
+//   &-next
+//     padding: 27px
+//     position: absolute
+//     top: 0
+//     left: 0
+.services-slider 
+  margin-right: 20px!important
 @media (min-width: 320px) and (max-width: 499px) 
+  .services-list 
+    max-width 100%
   .nav-list
     &-services
       display flex
@@ -191,6 +194,7 @@
     min-height: 300px
     padding: 0 20px
     margin-right 10px
+    max-width 535px
     &__prev
       absolute(, 60px, -15px)
     &__next
@@ -233,7 +237,7 @@
   .services-list
     transform: translateX(-11%)
     min-height: 320px
-    min-width: 720px
+    max-width: 720px
   .our-services__title
     padding-top 80px
     padding-right calc(15%)
@@ -265,7 +269,7 @@
       padding-right 33%
       font-size 36px
   .services-list
-      min-width 770px
+      max-width 770px
       transform: translateX(-23%)
     &__item
       font-size 20px
