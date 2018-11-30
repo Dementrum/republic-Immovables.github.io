@@ -1,37 +1,22 @@
+
 <?php
-$recepient = "dmi56756877@yandex.ru";
-$siteName = "Проверка";
-$name = trim($_POST["name"]);
-$phone = trim($_POST["phone"]);
-$tema = trim($_POST["tema"]);
-$message = "Имя: $name \nТелефон: $phone \nТема: $tema";
-$pagetitle = "Заявка с сайта \"$siteName\"";
-mail($recepient, $pagetitle, $message, "Content-type: text/plain; charset=\"utf-8\"\n From: $recepient");
+if((isset($_POST['name'])&&$_POST['name']!="")&&(isset($_POST['phone'])&&$_POST['phone']!="")&&(isset($_POST['tema'])&&$_POST['tema']!="")){ //Проверка отправилось ли наше поля name и не пустые ли они
+        $to = 'dmi56756877@yandex.ru'; //Почта получателя, через запятую можно указать сколько угодно адресов
+        $subject = 'Обратный звонок'; //Загаловок сообщения
+        $message = '
+                <html>
+                    <head>
+                        <title>'.$subject.'</title>
+                    </head>
+                    <body>
+                        <p>Имя: '.$_POST['name'].'</p>
+                        <p>Телефон: '.$_POST['phone'].'</p>     
+                        <p>Тема: '.$_POST['tema'].'</p>                    
+                    </body>
+                </html>'; //Текст нащего сообщения можно использовать HTML теги
+        $headers  = "Content-type: text/html; charset=utf-8 \r\n"; //Кодировка письма
+        $headers .= "From: Отправитель <from@example.com>\r\n"; //Наименование и почта отправителя
+        mail($to, $subject, $message, $headers); //Отправка письма с помощью функции mail
+}
 ?>
-<!-- <?php
-  if (isset($_POST['name'])) {$name = $_POST['name']; 
-    echo "<b>Имя отправителя: </b>".$name."<br>";}
-  if (isset($_POST['email'])) {$email = $_POST['email']; echo "<b> E-mail  отправителя: </b>".$email."<br>";}
-  if (isset($_POST['theme'])) {$theme = $_POST['theme']; echo "<b>Тема: </b>".$theme."<br>";}
-  if (isset($_POST['phone'])) {$phone = $_POST['phone']; echo "<b>Телефон: </b>".$phone."<br>";}
-  if (isset($_POST['text'])) {$text = $_POST['text']; echo "<b>Сообщение: </b>".$text."<br>";}
-  $to = "dmi56756877@mail.ru, web-js-coder.ru@yandex.ru, dmi56756877@yandex.ru, dmitrikolesnikov1976@gmail.com"; 
-  $headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
-  $headers .= "From: \"".$name."\" <".$email.">\r\n";
-  $subject = $theme;
-  $message = "<b>Имя отправителя:</b> $name <br>
-              <b>E-mail отправителя:</b> $email <br>
-              <b>Телефон:</b> $phone <br>
-              <b>Сообщение:</b> <br> $text";
-  $send = mail ($to, $subject, $message, $headers);
-    
-    if ($send == 'true')
-    {
-      echo "<div class='block_chip'><p>Ваше письмо доставлено. Очень скоро с вами свяжутся.</p></div>";
-        }
-    else
-    {
-      echo "<div class='block_important'><p>К сожалению, ваше письмо не доставлено. Вы можете написать нам на почту dmi56756877@yandex.ru</p></div>";
-    }
-						?> -->
    
