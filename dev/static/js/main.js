@@ -183,7 +183,7 @@ $(".mobile-nav__link").click(function() {
 $(window).load(function(){
 $('.services-slider').bxSlider({
 	mode: 'horizontal',
-	speed: 800,
+	touchDrag: false,
 	adaptiveWidth: true,
 	responsive: true,
 	keyboardEnabled: true,
@@ -223,7 +223,7 @@ popupClose.addEventListener('click', (e)=>{
 });
 //Popup form
 let pop = document.querySelector('.overlay')
-
+input = document.querySelectorAll('input');
 document.body.addEventListener('.general-button', (e) => {  
 	popup.style.display = 'block';
 	e.preventDefault();
@@ -234,37 +234,34 @@ document.body.addEventListener('.general-button', (e) => {
 
 //form
 
-
-// input = document.querySelectorAll('input');
-
-// document.body.addEventListener('submit', (e) => { 
-// let target = e.target;
-// e.preventDefault();
+document.body.addEventListener('submit', (e) => { 
+let target = e.target;
+e.preventDefault();
 
  
-// });
-// $(document).ready(function() {
-// $('#form').submit(function(e) { 
-// 	e.preventDefault(); 
-// 	$.ajax({
-// 		type: "POST",
-// 		url: "mail.php",
-// 		data: $(this).serialize()
-// 	}).done(function() {
-// 		console.log('Ок');
-// 		$(this).find('input').val('');
-// 		$('#form').trigger('reset');
-// 	});
-// 	return false;
-// });
-// });
+});
+$(document).ready(function() {
+$('#form').submit(function(e) { 
+	e.preventDefault(); 
+	$.ajax({
+		type: "POST",
+		url: "mail.php",
+		data: $(this).serialize()
+	}).done(function() {
+		console.log('Ок');
+		$(this).find('input').val('');
+		$('#form').trigger('reset');
+	});
+	return false;
+});
+});
 
-// document.body.addEventListener('submit', (e) => {  
-// 	e.preventDefault();
-// for(let i = 0; i < input.length; i++){
-// 			input[i].value = '';
-// }
-// });
+document.body.addEventListener('submit', (e) => {  
+	e.preventDefault();
+for(let i = 0; i < input.length; i++){
+			input[i].value = '';
+}
+});
 $(function(){
 		$('#formID').validate({
 			rules:{
@@ -272,18 +269,18 @@ $(function(){
 				name:{
 						required: true,
 						minlength: 2,
-						maxlength: 16,
+						maxlength: 30,
 				},
 	
 				phone:{
 						required: true,
 						minlength: 5,
-						maxlength: 16,
+						maxlength: 30,
 				},
 				tema:{
 					required: true,
 					minlength: 6,
-					maxlength: 16,
+					maxlength: 40,
 			}
 	 },
 		 messages: {
@@ -323,7 +320,7 @@ $(function(){
 				var form_data = $(this).serialize(); //собераем все данные из формы
 				$.ajax({
 				type: "POST", //Метод отправки
-				url: "mail.php", //путь до php фаила отправителя
+				url: "/mail.php", //путь до php фаила отправителя
 				data: form_data ,
 				success: function() {
 					   //код в этом блоке выполняется при успешной отправке сообщения
