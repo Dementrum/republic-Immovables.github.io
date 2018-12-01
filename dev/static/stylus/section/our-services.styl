@@ -18,34 +18,41 @@
     font-weight normal
 
 .nav-list
+  min-height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between
   &-services
+    min-height: 45px
     &__item
       text-align center
+      flex: 0 1 33.33%
     &__link
       font-size: 23px 
       line-height: 1
       position relative
-      &:after
-        display block
-        content ''
-        size(0%, 2px)
-        left: 50%
-        position absolute
-        background-color #ffffcc
-        transition width .3s ease-in-out
-        transform:translateX(-50%)
-      &:hover:after,
-      &:focus:after
-        width 100%  
-      &.active
-        color #ffffcc
-        &::after
-          content ''
-          display block
-          background-color #fff
-          width 100px
-          height 2px
-          margin-top 10px
+      outline: none
+      // &:after
+      //   display block
+      //   content ''
+      //   size(0%, 1px)
+      //   left: 50%
+      //   position absolute
+      //   background-color #ffffcc
+      //   transition width .3s ease-in-out
+      //   transform:translateX(-50%)
+      // &:hover:after,
+      // &:focus:after
+      //   width 100%  
+      // &.active
+      //   color #ffffcc
+      //   &::after
+      //     content ''
+      //     display block
+      //     background-color #fff
+      //     width 100px
+      //     height 2px
+      //     margin-top 10px
 .services-list
   background #fff
   display flex
@@ -152,6 +159,15 @@
 //     left: 0
 .services-slider 
   margin-right: 20px!important
+.slick
+  &-track
+    display flex
+    flex: 0 1 100%
+    min-height: 30px
+  &-list
+    display: flex
+    flex: 0 1 100%
+
 @media (min-width: 320px) and (max-width: 499px) 
   .services-list 
     max-width 100%
@@ -162,6 +178,10 @@
         display none
       &__item:first-child
         display block
+      &__link
+        display none
+  .nav-mobile-block
+    display: block
   .our-services 
     &__right
       min-width: 320px
@@ -287,7 +307,9 @@
       background-size cover
     &__right
       flex: 0 1 55%
-
+.hidd
+  border-bottom 1px solid #ffffcc
+  color: #ffffcc
 
 
 
