@@ -2,17 +2,17 @@ section.section.our-services#services
   .our-services__left
   .our-services__right
     h2.our-services__title Наши услуги
-    nav.nav-list#bx-pager
+    nav.nav-list.sl1
       ul.nav-list-services
         li.nav-list-services__item
-          a.nav-list-services__link(data-slide-index='0' href='') Продажа
+          a.nav-list-services__link(data-slide-index='0' ) Продажа
         li.nav-list-services__item
-          a.nav-list-services__link(data-slide-index='1' href='') Покупка
+          a.nav-list-services__link(data-slide-index='1' ) Покупка
         li.nav-list-services__item
-          a.nav-list-services__link(data-slide-index='2' href='') Другие
+          a.nav-list-services__link(data-slide-index='2') Другие
     .services-list
-      .services-slider
-        ul.services-list__nav
+      .services-slider.sl2
+        ul.services-list__nav(data-slide-index='0')
           li.services-list__item.note
             | Профессиональная оценка объекта недвижимости
           li.services-list__item.cheet
@@ -21,7 +21,7 @@ section.section.our-services#services
             | Поиск покупателя в обширной клиентской базе
           li.services-list__item.key
             | Организация и проведение сделки купли-продажи <br>(от составления договоров до передачи ключей покупателям )
-        ul.services-list__nav
+        ul.services-list__nav(data-slide-index='1')
           li.services-list__item.note
             | Оформление ипотек в ведущих банках г.Петрозаводск
           li.services-list__item.search
@@ -30,7 +30,7 @@ section.section.our-services#services
             | Юридическая экспертиза документов, предоставленных <br> продавцом по продаваемому обьекту недвижимости 
           li.services-list__item.key
             | Организация и проведение сделки купли-продажи <br>(от составления договоров до передачи ключей покупателям )
-        ul.services-list__nav
+        ul.services-list__nav(data-slide-index='2')
           li.services-list__item.note
             | Составление договоров купли-продажи недвижимости
           li.services-list__item.calculate

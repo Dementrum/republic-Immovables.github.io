@@ -315,7 +315,8 @@ $(function(){
 		}
 	);
 	$('.services-slider').slick({
-		arrows: false
+		arrows: false,
+		cssEase:'ease-in'
 		}
 	);
 	$('#pronext').on('click', function() {
@@ -324,6 +325,30 @@ $(function(){
 	$('#proprev').on('click', function() {
 		$('.services-slider').slick('slickPrev');
 	});
+	
+	$('.sl1').slick({
+		// slidesToShow: 1,
+		slidesToScroll: 1,
+		// arrows: false,
+		// fade: true,
+		dots:true,
+
+		asNavFor: '.sl2'
+	  });
+	  $('.sl2').slick({
+		slidesToShow: 3,
+		slidesToScroll: 1,
+		asNavFor: '.sl1',
+		dots: true,
+		centerMode: true,
+		focusOnSelect: true
+	  });
+		  
+	
+	
+	
+	
+	
 	$(document).ready(function(){
 		$("#formID").submit(function() { //устанавливаем событие отправки для формы с id=form
 				var form_data = $(this).serialize(); //собераем все данные из формы
