@@ -316,40 +316,38 @@ $(function(){
 	);
 	$('.services-slider').slick({
 		arrows: false,
-		cssEase:'ease-in'
+		cssEase:'ease-in',
+		dots:true,
+		// asNavFor: '.nav-list-services'
+		customPaging : function(slider, i) {
+			var thumb = $(slider.$slides[i]).data('thumb');
+			return '<a.nav-list-services__link><'+thumb+'"></a>';
+	}
 		}
 	);
+	$('.nav-list-services').slick({ // настройка навигации
+		slidesToShow: 3, // указываем что нужно показывать 3 навигационных изображения
+		asNavFor: '.services-slider', // указываем что это навигация для блока выше
+		focusOnSelect: true,// указываем что бы слайделось по клику
+		swipe: false
+	});
 	$('#pronext').on('click', function() {
 		$('.services-slider').slick('slickNext');
 	});
 	$('#proprev').on('click', function() {
 		$('.services-slider').slick('slickPrev');
 	});
-	
-	$('.sl1').slick({
-		// slidesToShow: 1,
-		slidesToScroll: 1,
-		// arrows: false,
-		// fade: true,
-		dots:true,
 
-		asNavFor: '.sl2'
-	  });
-	  $('.sl2').slick({
-		slidesToShow: 3,
-		slidesToScroll: 1,
-		asNavFor: '.sl1',
-		dots: true,
-		centerMode: true,
-		focusOnSelect: true
-	  });
-		  
 	
 	
 	
 	
 	
-	$(document).ready(function(){
+	
+	
+	
+	
+		$(document).ready(function(){
 		$("#formID").submit(function() { //устанавливаем событие отправки для формы с id=form
 				var form_data = $(this).serialize(); //собераем все данные из формы
 				$.ajax({
