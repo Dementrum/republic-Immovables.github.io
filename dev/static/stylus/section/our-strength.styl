@@ -1,7 +1,7 @@
 .our-strength
   &__container
     col(flex-start, center)
-    box-shadow: inset 6px 4px 72px #fafafa
+  
   &__title
     margin 80px 0 60px 0
     font-family PtFont
@@ -9,7 +9,6 @@
     font-weight normal
   &__nav
     display flex
-    // justify-content space-around
     flex-wrap wrap
   &__item
     text-align center
@@ -33,6 +32,8 @@
   .our-strength
     &__item
       flex 0 1 49% 
+    &__container 
+      box-shadow: inset 6px 4px 72px #fafafa
 @media (min-width: 320px) and (max-width: 767px)
   .our-strength
     &__title

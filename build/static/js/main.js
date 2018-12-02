@@ -154,10 +154,6 @@ $(".toggle").on("click", function (e) {
 });
 });
 
-//Magnific-popup
-$('.popup-link').magnificPopup({
-	type:'inline'
-});
 //Mobile-menu
 $(document).ready(function () {
 	$('.sandwich').click(function(){
@@ -196,7 +192,7 @@ $('.services-slider').bxSlider({
 	maxSlides: 1,
 	slideWidth: 600,
 	slideMargin: 5,
-	startSlide: 0
+
 });
 });  
 });
