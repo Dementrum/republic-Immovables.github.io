@@ -1,15 +1,3 @@
-// document.body.addEventListener('click', e => {   
-//     let target = e.target;
-//     if (target && target.matches('a[href*="#"]')) {
-//     e.preventDefault();
-
-//     const blockID = target.getAttribute("href");
-//     document.querySelector("" + blockID).scrollIntoView({
-//         block: "start",
-//         behavior: "smooth"
-//     });
-// }
-// });
 
 $(document).ready(function () {
 	svg4everybody({});
@@ -109,15 +97,15 @@ window.onscroll = (function(){
 	})
  });
 
- $('.nav-list__link').on('click', function(e){
+ $('.nav-list__link, .btn, .consult').on('click', function(e){
 	e.preventDefault();
 	let scroll_el = $(this).attr('href'),
 			scroll    = $(scroll_el).offset().top;
 	
-	$('html, body').animate({
-		scrollTop: scroll - 74
-	}, 300);
-});
+		$('html, body').animate({
+			scrollTop: scroll - 74
+		}, 800);
+	});
 });
 
 //Add class
@@ -179,6 +167,7 @@ $(".mobile-nav__link").click(function() {
 $(window).load(function(){
 $('.services-slider').bxSlider({
 	mode: 'horizontal',
+	speed: 600,
 	touchDrag: false,
 	adaptiveWidth: true,
 	responsive: true,
