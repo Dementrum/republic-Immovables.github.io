@@ -1,15 +1,15 @@
-document.body.addEventListener('click', e => {   
-    let target = e.target;
-    if (target && target.matches('a[href*="#"]')) {
-    e.preventDefault();
+// document.body.addEventListener('click', e => {   
+//     let target = e.target;
+//     if (target && target.matches('a[href*="#"]')) {
+//     e.preventDefault();
 
-    const blockID = target.getAttribute("href");
-    document.querySelector("" + blockID).scrollIntoView({
-        block: "start",
-        behavior: "smooth"
-    });
-}
-});
+//     const blockID = target.getAttribute("href");
+//     document.querySelector("" + blockID).scrollIntoView({
+//         block: "start",
+//         behavior: "smooth"
+//     });
+// }
+// });
 
 $(document).ready(function () {
 	svg4everybody({});
