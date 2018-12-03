@@ -30,10 +30,10 @@ footer
   font-size 18px
   font-weight 400
   line-height 1.7
- 
+  span
+    display block
 .footer-contacts
   h3
-    // font-size 24px
     font-weight 600
   &__title
     margin-top 25px
@@ -91,10 +91,6 @@ footer
     &-mobile
       text-align center
       padding 20px 0
-  .nav-soc--footer
-    justify-content center
-    padding-left 45px
-  
   .address
     display none
   .welcome-desc
@@ -132,7 +128,7 @@ footer
   .nav-soc--footer
     position absolute
     margin 30px 0 20px 
-@media(min-width: 662px) and (max-width: 768px)
+@media(min-width: 662px) and (max-width: 940px)
   .address,
   .footer-list
     flex: 0 1 50%
@@ -161,7 +157,7 @@ footer
   .nav-soc--footer
     justify-content center
   .address
-    flex 0 1 40%     
+    flex 0 1 43%     
 @media(min-width: 767px) and (max-width: 1600px)
   .welcome-text
     justify-content space-between
@@ -178,6 +174,12 @@ footer
     &-soc
       &__mobile
         display none
+@media(min-width: 900px) and (max-width: 1130px)
+  .address
+    flex 0 1 35%
+@media(min-width: 1400px) and (max-width: 1600px)
+  .footer-contacts__title 
+    margin-right: 30px
 @media(min-width: 1600px) and (max-width: 2048px)
   .footer
     &-phone

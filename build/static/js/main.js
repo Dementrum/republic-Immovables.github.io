@@ -83,19 +83,20 @@ var myMarker = new google.maps.Marker({
 google.maps.event.addDomListener(window, "load", initMap);
 
 $(document).ready(function () {
-window.onscroll = (function(){
-	let $sections = $('.section');
-	$sections.each(function(i,el){
-		let top = $(el).offset().top - 100;
-		let bottom = top +$(el).height();
-		let scroll = $(window).scrollTop();
-		let id = $(el).attr('id');
-		if( scroll > top && scroll < bottom){
-			$('a.active').removeClass('active');
-			$('a[href="#'+id+'"]').addClass('active');
-		}
-	})
- });
+	window.onscroll = (function(){
+		let $sections = $('.section');
+		$sections.each(function(i,el){
+			let top = $(el).offset().top - 100;
+			let bottom = top +$(el).height();
+			let scroll = $(window).scrollTop();
+			let id = $(el).attr('id');
+			if( scroll > top && scroll < bottom){
+				$('a.active').removeClass('active');
+				$('a[href="#'+id+'"]').addClass('active');
+			}
+			
+		})
+	});
 
  $('.nav-list__link, .btn, .consult').on('click', function(e){
 	e.preventDefault();
@@ -105,6 +106,7 @@ window.onscroll = (function(){
 		$('html, body').animate({
 			scrollTop: scroll - 74
 		}, 800);
+		
 	});
 });
 
@@ -160,31 +162,34 @@ $(".mobile-nav__link").click(function() {
 		scrollTop: destination
 	}, 1000);
 	return false;
-})
-})
+	})
+	});
+});
 //bx-slider
 
 $(window).load(function(){
 $('.services-slider').bxSlider({
-	mode: 'horizontal',
-	speed: 600,
-	touchDrag: false,
-	adaptiveWidth: true,
-	responsive: true,
-	keyboardEnabled: true,
-	nextSelector: '#pronext',
-	prevSelector: '#proprev',
-	pagerCustom: '#bx-pager',
-	prevText: '',   
-	nextText: '',
-	minSlides: 1,
-	maxSlides: 1,
-	slideWidth: 600,
-	slideMargin: 5,
+			mode: 'horizontal',
+			speed: 500,
+			pause: 500,
+			touchDrag: false,
+			adaptiveWidth: true,
+			responsive: true,
+			keyboardEnabled: true,
+			nextSelector: '#pronext',
+			prevSelector: '#proprev',
+			pagerCustom: '#bx-pager',
+			prevText: '',   
+			nextText: '',
+			minSlides: 1,
+			maxSlides: 1,
+			slideWidth: 600,
+			slideMargin: 5
+	
+		});
+	});  
+// });
 
-});
-});  
-});
 //Popup overlay
 let popup = document.querySelector('.overlay')
 
@@ -311,5 +316,6 @@ $(function(){
 					   //код в этом блоке выполняется при успешной отправке сообщения
 					   alert("Ваше сообщение отправлено!");
 				}
-	});
-	}); });
+		});
+	}); 
+});
