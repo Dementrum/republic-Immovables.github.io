@@ -89,13 +89,13 @@
         padding 50px 30px
         p 
           line-height 1.5
-@media(min-width: 769px) and (max-width: 2048px)
+@media(min-width: 769px) and (max-width: 3500px)
   .services
     &-title
       font-size 36px
     &-list
       &__reviews
-        min-height 320px
+        min-height 300px
         margin: 0 auto
         position relative
       &__prev,
@@ -109,14 +109,18 @@
       &__reviews
         display block
      
-@media(min-width: 1271px) and (max-width: 2048px)
+@media(min-width: 1271px) and (max-width: 3500px)
   .services
     &-list
       &__reviews
         max-width: 970px
-        padding 64px 60px
+        padding 0 60px
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         p 
-          line-height 1.8
+          line-height 1.5
           font-size 18px
 
 
