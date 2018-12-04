@@ -41,7 +41,7 @@
         &::after
           content ''
           display block
-          background-color #fff
+          background-color #ffffcc
           width 100px
           height 2px
           margin-top 3px
@@ -138,6 +138,9 @@
 .bx-wrapper
   display flex
   margin 0 auto
+  box-shadow: none
+  border: none
+
 .bx
   &-prev
     padding: 27px
@@ -149,7 +152,6 @@
     position: absolute
     top: 0
     left: 0
-
 @media (min-width: 320px) and (max-width: 499px) 
   .nav-list
     &-services
@@ -171,6 +173,8 @@
     &__item
       padding 15px 0 0 10px
       line-height 1.6
+      max-width 300px
+      margin 0 auto
     &__item:last-child
       padding-bottom 15px
     margin-top 24px
@@ -182,6 +186,9 @@
       bottom -40px
     &__prev
       absolute(, 50%, -40px) 
+  .bx-viewport
+    max-width 90%
+    transform: translateX(10px)
 @media (min-width: 451px) and (max-width: 500px) 
   .our-services__right 
     border-bottom: 112px solid #fafafa 

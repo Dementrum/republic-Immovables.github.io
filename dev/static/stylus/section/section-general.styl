@@ -14,6 +14,7 @@
   background-position center
   min-height 100vh
   min-width 300px
+  
   &-title
     font-family PtFont
   &-desc
@@ -27,6 +28,7 @@
     display inline-block
     margin-top 50px
     cursor pointer
+    border none
     background-image: linear-gradient(to top, #990000 0%, #cc0000 100%)
     &__link
       font-size: 18px
@@ -38,11 +40,16 @@
     &:active
       background-color #a31c1d
       background-image none
-// .mfp-hide
-//   display none
+@media (min-width: 320px) and (max-width: 767px)
+  .general
+    background-image url(../img/content/city-mobile.jpg)
+@media (min-width: 767px) and (max-width: 1400px)
+  .general
+    background-position bottom -87px left 0
 @media (max-width: 336px)
-  .general-title .title 
-      font-size 28px
+  .general-title 
+    .title 
+      font-size 28px 
 @media (min-width: 337px) and (max-width: 768px)
   .general-title .title 
       font-size 30px
@@ -82,7 +89,7 @@
     flex-direction column
     align-items flex-start
     justify-content space-between
-@media (max-width: 1170px) 
+@media (max-width: 980px) 
   .general
     min-height: 570px
 @media (min-width: 1170px) and (max-width: 2048px) 
