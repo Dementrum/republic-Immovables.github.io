@@ -69,6 +69,7 @@
         display inline-block
         color #ca0611
         margin-right 10px
+        font-size 20px
     &.cheet
       &:before
         content ''
@@ -152,12 +153,13 @@
     position: absolute
     top: 0
     left: 0
+span.mobile-stroke
+  display none
+
 @media (min-width: 320px) and (max-width: 499px) 
   .nav-list
     &-services
       display flex
-      &__item
-        display none
       &__item:first-child
         display block
   .our-services 
@@ -169,26 +171,75 @@
       padding 42px 0 10px 0
     &__left
       min-height 560px
+  span.search-mode
+    display block
+  .services-list__nav--mod
+    .services-list__item
+      max-width 275px
   .services-list
     &__item
-      padding 15px 0 0 10px
+      padding 10px 0 0 10px
       line-height 1.6
-      max-width 300px
+      max-width 285px
       margin 0 auto
+      
     &__item:last-child
       padding-bottom 15px
     margin-top 24px
     &__nav
       padding 27px 19px
+
     &__next
       position absolute
       left 50%
       bottom -40px
     &__prev
-      absolute(, 50%, -40px) 
-  .bx-viewport
-    max-width 90%
-    transform: translateX(10px)
+      absolute(, 50%, -40px)
+  .services-list__item
+    &.note,
+    &.cheet,
+    &.search,
+    &.key,
+    &.doc,
+    &.legal,
+    &.calculate
+      &:before
+       font-size 16px
+  .nav-list-services__link
+    opacity 0
+    transition: opacity .2s
+  .nav-list-services__link 
+    &.active
+      opacity 1
+      transition: opacity .2s
+  .nav-list
+   .nav-list-services
+      display flex
+      justify-content column
+      align-items: center
+      justify-content center
+      min-height: 40px
+      min-width 300px
+      &__item
+        position absolute
+@media (min-width: 320px) and (max-width: 767px)
+  .fix-touch
+    height: 540px
+    position: absolute
+    width: 125px
+    z-index: 1
+    border-left: transparent
+    top: 53px
+    left: -50px
+  .fix-touch2
+    height: 540px
+    position: absolute
+    width: 50px
+    z-index: 1
+    border-left: transparent
+    top: 53px
+    right 0
+    
 @media (min-width: 451px) and (max-width: 500px) 
   .our-services__right 
     border-bottom: 112px solid #fafafa 
@@ -203,12 +254,13 @@
       absolute(, 0, -15px)
     &__item
       font-size 16px
+      padding 0 20px
   .nav-list
     min-width 300px
   .our-services__title
     font-size 33px
     padding-top 60px
-@media (min-width: 500px) and (max-width: 1169px)
+@media (min-width: 500px) and (max-width: 1169px) 
   .our-services 
     min-height 560px 
     &__left
