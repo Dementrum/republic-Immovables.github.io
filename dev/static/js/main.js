@@ -79,7 +79,27 @@ var myMarker = new google.maps.Marker({
 }); 
 
 }
-
+$(window).load(function(){
+	$('.services-slider').bxSlider({
+				mode: 'horizontal',
+				speed: 500,
+				pause: 500,
+				touchDrag: false,
+				adaptiveWidth: true,
+				responsive: true,
+				keyboardEnabled: true,
+				nextSelector: '#pronext',
+				prevSelector: '#proprev',
+				pagerCustom: '#bx-pager',
+				prevText: '',   
+				nextText: '',
+				minSlides: 1,
+				maxSlides: 1,
+				slideWidth: 600,
+				slideMargin: 5
+		
+			});
+		});  
 google.maps.event.addDomListener(window, "load", initMap);
 
 $(document).ready(function () {
@@ -91,8 +111,8 @@ $(document).ready(function () {
 			let scroll = $(window).scrollTop();
 			let id = $(el).attr('id');
 			if( scroll > top && scroll < bottom){
-				$('a.active').removeClass('active');
-				$('a[href="#'+id+'"]').addClass('active');
+				$('a.active1').removeClass('active1');
+				$('a[href="#'+id+'"]').addClass('active1');
 			}
 			
 		})
@@ -108,8 +128,18 @@ $(document).ready(function () {
 		}, 800);
 		
 	});
-});
 
+});
+$('#contacts').on('click', function(e){
+	e.preventDefault();
+	let scroll_el = $(this).attr('href'),
+			scroll    = $(scroll_el).offset().top;
+
+		$('html, body').animate({
+			scrollTop: scroll + 2800
+		}, 800);
+		
+	});
 //Add class
 $(document).ready(function() {
 $(window).scroll(function() {    
@@ -167,27 +197,7 @@ $(".mobile-nav__link").click(function() {
 });
 //bx-slider
 
-$(window).load(function(){
-$('.services-slider').bxSlider({
-			mode: 'horizontal',
-			speed: 500,
-			pause: 500,
-			touchDrag: false,
-			adaptiveWidth: true,
-			responsive: true,
-			keyboardEnabled: true,
-			nextSelector: '#pronext',
-			prevSelector: '#proprev',
-			pagerCustom: '#bx-pager',
-			prevText: '',   
-			nextText: '',
-			minSlides: 1,
-			maxSlides: 1,
-			slideWidth: 600,
-			slideMargin: 5
-	
-		});
-	});  
+
 // });
 
 //Popup overlay
@@ -291,7 +301,9 @@ $(function(){
 	 }); 
 	
 	 $('.reviews-slider').slick( {
-		arrows: false
+		arrows: false, 
+		// slidesToShow: 3,
+		// slidesToScroll: 3
 	 }
 	);
 	$('#next').on('click', function() {
