@@ -28,17 +28,18 @@
   &-placeholder,
   &-contract
     fill #000030
- .contract
-    span
-      padding-left 3px
+.mobile-resp__text
+  span 
+    font-size 15px
+    padding-left 3px
 @media (min-width: 320px) and (max-width: 479px)
   .our-strength
     &__item
-      flex 0 1 50% 
+      flex 0 1 46% 
     &__container 
       box-shadow: inset 6px 4px 72px #fafafa
 
-@media (min-width: 335px) and (max-width: 479px)
+@media (min-width: 335px) and (max-width: 617px)
   .contract
     span
       padding-left 3px
@@ -98,18 +99,21 @@
         size(65px, 55px)
     .container-icon
       padding-right 10px
+  .mobile-resp__text
+    text-align left
+    margin-top 10px
 @media (min-width: 824px) and (max-width: 1034px)
   .our-strength__item
     padding-right calc(4%)
 @media (min-width: 1035px) and (max-width: 1185px)
   .our-strength__item
     padding-right calc(9%)
-@media (min-width: 1170px) and (max-width: 3500px)
+@media (min-width: 1170px) and (max-width: 4800px)
   .our-strength
     &__container
       min-height 420px
     &__item
-      flex: 0 1 21%
+      flex: 0 1 18%
     &__title--mobile
       display none
     &__nav
