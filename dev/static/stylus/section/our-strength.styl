@@ -28,12 +28,22 @@
   &-placeholder,
   &-contract
     fill #000030
+ .contract
+    span
+      padding-left 3px
 @media (min-width: 320px) and (max-width: 479px)
   .our-strength
     &__item
-      flex 0 1 46% 
+      flex 0 1 50% 
     &__container 
       box-shadow: inset 6px 4px 72px #fafafa
+
+@media (min-width: 335px) and (max-width: 479px)
+  .contract
+    span
+      padding-left 3px
+      &:nth-child(even)
+        display block
 @media (min-width: 320px) and (max-width: 767px)
   .our-strength
     &__title
