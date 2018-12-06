@@ -67,6 +67,10 @@
     &-placeholder,
     &-contract
       size(55px, 60px)
+  .fix-world__skyline--mod 
+    display none!important
+  .mobile-resp 
+    display none!important
 @media (min-width: 451px) and (max-width: 500px)
   .our-strength
     margin-top -75px
@@ -102,18 +106,22 @@
   .mobile-resp__text
     text-align left
     margin-top 10px
+@media (min-width: 768px)
+  .fix-world__sryline,
+  .mobile-resp__text
+    display none!important  
 @media (min-width: 824px) and (max-width: 1034px)
   .our-strength__item
     padding-right calc(4%)
 @media (min-width: 1035px) and (max-width: 1185px)
   .our-strength__item
     padding-right calc(9%)
-@media (min-width: 1170px) and (max-width: 4800px)
+@media (min-width: 1170px)
   .our-strength
     &__container
       min-height 420px
     &__item
-      flex: 0 1 18%
+      flex: 0 1 21%
     &__title--mobile
       display none
     &__nav
