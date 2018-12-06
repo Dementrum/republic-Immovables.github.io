@@ -1,6 +1,6 @@
 module.exports = function() {
     $.gulp.task('img:dev', () => {
-        return $.gulp.src('./dev/static/img/**/*.{png,jpg,gif,svg,mp4,ogv,webm}')
+        return $.gulp.src('./dev/static/img/**/*.{png,jpg,gif,svg}')
             .pipe($.gulp.dest('./build/static/img/'));
     });
 
@@ -16,7 +16,7 @@ module.exports = function() {
     // });
     
     $.gulp.task('img:build', () => {
-        return $.gulp.src('./dev/static/img/**/*.{png,jpg,gif,svg,mp4,ogv,webm}')
+        return $.gulp.src('./dev/static/img/**/*.{png,jpg,gif,svg}')
             .pipe($.gp.tinypng('ROs7wvgvqNPWKO1oKB70pi2cZByPlN6t'))
             .pipe($.gulp.dest('./build/static/img/'));
     });
