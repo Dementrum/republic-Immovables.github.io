@@ -356,4 +356,10 @@ $(function(){
 				}
 		});
 	}); 
+}); 
+$(document).ready(function() {
+	$('#sub').click(function(){
+		$('#checkbox').trigger('click'); 
+			return false;
+	});
 });
