@@ -365,11 +365,11 @@ for(let i = 0; i < input.length; i++){
 // });
 
 
-$(window).resize(function () {
-	if ($(window).width() > 320 && $(window).width() < 920) {
-		window.location.reload()
-	}
-});
+// $(window).resize(function () {
+// 	if ($(window).width() > 320 && $(window).width() < 920) {
+// 		window.location.reload()
+// 	}
+// });
 
 // $(document).ready(function() {
 // 	setInterval(function(){ 
