@@ -7,7 +7,7 @@ section.section.map#contacts
         span.form-title-desc Заполните заявку и мы свяжемся с Вами
       .form-group.form-group--name 
         label.form-label Ваше имя:
-        input.form-control#name(type="name" name="name" placeholder="Ваше имя" tabindex="1" required onKeyUp="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}" )
+        input.form-control#name(type="text" name="name" placeholder="Ваше имя" tabindex="1" required onKeyUp="if(/[^a-zA-Zа-яА-ЯёЁ .]/i.test(this.value)){this.value='';}" )
       .form-group.form-group--phone
         label.form-label Телефон:
         input.form-control#phone( type="text" name="phone" placeholder="Телефон:" tabindex="2" required onkeyup="this.value = this.value.replace (/[^0-9+]/g, '')").g-input

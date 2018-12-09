@@ -99,28 +99,7 @@ $(window).load(function(){
 				slideMargin: 5
 		
 			});
-		});  
-$(window).load(function(){
-	$('.services-slider').bxSlider({
-				mode: 'horizontal',
-				speed: 500,
-				pause: 500,
-				touchDrag: false,
-				adaptiveWidth: true,
-				responsive: true,
-				keyboardEnabled: true,
-				nextSelector: '#pronext',
-				prevSelector: '#proprev',
-				pagerCustom: '#bx-pager',
-				prevText: '',   
-				nextText: '',
-				minSlides: 1,
-				maxSlides: 1,
-				slideWidth: 600,
-				slideMargin: 5
-		
-		});
-});   
+		});     
 google.maps.event.addDomListener(window, "load", initMap);
 
 $(document).ready(function () {
@@ -151,7 +130,7 @@ $(document).ready(function () {
 	});
 
 });
-$('#contacts').on('click', function(e){
+$('#contact-fix').on('click', function(e){
 	e.preventDefault();
 	let scroll_el = $(this).attr('href'),
 			scroll    = $(scroll_el).offset().top;
@@ -222,9 +201,6 @@ $(window).resize(function () {
 		}
     };
 });
-// $(window).resize(function(){
-// 	window.setTimeout('location.reload()', 500);
-// });
 
 //Popup overlay
 let popup = document.querySelector('.overlay')
@@ -359,40 +335,3 @@ for(let i = 0; i < input.length; i++){
 		});
 	}); 
 }); 
-// $(document).ready(function() {
-// 	$('#sub').click(function(){
-// 		$('#checkbox').trigger('click'); 
-// 			return false;
-// 	});
-// });
-
-
-// $(window).resize(function () {
-// 	if ($(window).width() > 320 && $(window).width() < 920) {
-// 		window.location.reload()
-// 	}
-// });
-
-// $(document).ready(function() {
-// 	setInterval(function(){ 
-// 		$("services-list--mobile").load(); 
-// 		}, 3000);
-// });
-// $(document).ready(function(){
-
-// 	// Check if the current URL contains '#'
-// 	if(document.URL.indexOf("#")==-1)
-// 	{
-// 			// Set the URL to whatever it was plus "#".
-// 			url = document.URL+"#";
-// 			location = "#";
-
-// 			//Reload the page
-// 			 location.reload(true);
-// 	}
-// })
-
-
-// function timedRefresh(timeoutPeriod) {
-// 	setTimeout("location.reload(true);",timeoutPeriod);
-// }

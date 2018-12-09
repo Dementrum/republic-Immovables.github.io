@@ -10,7 +10,7 @@ mixin nav(className, items, activeItem, id)
 				li(class= `${className}__item`  )
 					a(class=`${className}__link`+ ( ( ndx === activeItem ) ? ` ${className}__item active1` : ' ') href=item.href)= item.name
 			li.nav-list__item
-				a.nav-list__link1(href="#contacts" id="contacts") Контакты
+				a.nav-list__link1(href="#contacts" id="contact-fix") Контакты
 
 mixin nav-mobile(className, items, activeItem)
 	nav.mobile
