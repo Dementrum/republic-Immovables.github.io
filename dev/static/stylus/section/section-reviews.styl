@@ -13,9 +13,13 @@
     &__two,
     &__three,
     &__four
+      background #fff
       display flex!important
       flex-direction: column
       justify-content space-around
+      margin: 0 10px
+      padding 20px 25px
+      min-height: 350px
 .toggle,
 .read-more-trigger
   cursor pointer 
@@ -35,8 +39,10 @@
       display none
     &--mobile
       margin-bottom 55px
+.slick-slide
+  width 300px
 .slick-slider
-  width: 89%
+  width: 100%
   margin: 0 auto
 .slick-initialized .slick-slide 
   outline: 0 none !important
@@ -74,6 +80,8 @@
   display inline-block
   border-bottom 1px solid #000
 
+.slick-track
+  min-width: 237px
 @media(min-width: 320px) and (max-width: 559px)
   .services
     &-title
@@ -82,16 +90,17 @@
         display block
     &-list
       &--mobile
-        max-width: 83%
-        padding 30px 21px
-        
+        max-width: 100%
         p
           font-size 16px
           line-height 1.5
   .reviews-title
     font-size 20px
-  .reviews-title
-    font-size 20px
+    padding-bottom: 10px
+  .reviews-mobile__two
+    .read-more-target
+      margin-bottom: 47px
+      display: inline-block
 @media(min-width: 320px) and (max-width: 768px)
   .services
     &-title
@@ -114,6 +123,8 @@
     &__prev
     &__next
       display none
+  .slick-slide
+    padding 0 10px
 @media(min-width: 560px)
   .services
     &-title

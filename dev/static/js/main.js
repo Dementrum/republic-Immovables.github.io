@@ -328,8 +328,7 @@ for(let i = 0; i < input.length; i++){
 	
 	 $('.reviews-slider').slick( {
 		arrows: false, 
-		// slidesToShow: 3,
-		// slidesToScroll: 3
+
 	 }
 	);
 	$('#next').on('click', function() {
@@ -339,7 +338,10 @@ for(let i = 0; i < input.length; i++){
 		$('.reviews-slider').slick('slickPrev');
 	});	
 	$('.mobile-slider').slick({
-		arrows: false
+		arrows: false,
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		variableWidth: true
 		}
 	);
 
